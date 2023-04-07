@@ -1,0 +1,50 @@
+.global-breadcrumb
+	.breadcrumb
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		min-height: 40px
+		@media (min-width: 1280px)
+			min-height: 60px
+	.container
+		max-width: 1440px
+	li
+		position: relative
+		font-size: r(16px)
+		line-height: r(24px)
+		& + li
+			@apply pl-15px ml-10px
+			&::before
+				font-family: "Font Awesome 5 Pro"
+				content: "\f105"
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				font-size: r(16px)
+		a
+			@apply font-normal text-sm leading-22px
+		&:first-child
+			a
+				font-size: 0
+				position: relative
+				@apply flex items-center
+				&::before
+					content: '\e3af'
+					@apply font-Awesome6 text-sm
+
+.normal-breadcrumb
+	.global-breadcrumb
+		background: #F5F5F5
+		.breadcrumb
+			min-height: r(40px)
+		li
+			&::before
+				@apply text-t9
+			a
+				@apply text-t9
+
+#page-banner
+	.global-breadcrumb
+		.container
+			@apply px-0

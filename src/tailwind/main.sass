@@ -1,0 +1,46 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+@layer components
+	*,
+	*::before,
+	*::after
+		box-sizing: border-box
+
+	*::-webkit-scrollbar-track
+		background-color: #fff
+
+	*::-webkit-scrollbar
+		// width: r(10px)
+		width: 0
+
+	*::-webkit-scrollbar-thumb
+		border-radius: 0
+		@apply bg-primary
+
+	html
+		-webkit-text-size-adjust: 100%
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+		--padding-left: calc(15/1920*100rem)
+		--padding-right: calc(15/1920*100rem)
+		@apply text-black
+		@media (min-width: 1280px)
+			--padding-left: calc(100/1920*100rem)
+			--padding-right: calc(100/1920*100rem)
+
+	body
+		line-height: 1.5
+		font-weight: 400
+		@apply font-body text-lg
+
+	img
+		display: inline
+	.absolute-center
+		@apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute
+	main
+		margin-top: var(--fixed-header-height)
+	.fullpage
+		main
+			@media (min-width: 1280px)
+				margin-top: 0

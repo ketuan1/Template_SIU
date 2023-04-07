@@ -1,0 +1,86 @@
+
+// Overlay 
+
+#overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#000 ,.7 )
+	@apply pointer-events-none opacity-0 transition-all z-30
+	&.active
+		@apply pointer-events-auto opacity-100
+.desktop-show
+	@apply hidden xl:block
+
+.mobile-show
+	@apply block xl:hidden
+
+#fixed-tool
+	bottom: 5vh
+	z-index: 100
+	@apply fixed grid gap-15px
+	@apply right-10px
+	.icon
+		width: r(50px)
+		height: r(50px)
+		background-color: #2063A1
+		@apply flex items-center justify-center rounded-full transition-all
+		&:hover
+			@apply bg-secondary
+		em
+			font-size: r(32px)
+			@apply text-white font-normal
+			@apply text-lg leading-18px
+	.scrollToTop
+		@apply translate-y-full opacity-0
+		@apply shadow-lg
+		&.active
+			@apply translate-y-0 opacity-100
+
+.hidden-1024
+	@apply hidden lg:block
+
+ul
+	&.list-item-added
+		padding-left: 19px
+		@apply list-disc
+		@media (min-width: 1280px)
+			padding-left: r(19px)
+
+html
+	--layout-align-left: calc(155/1920*100rem)
+
+.fa-square-facebook:before
+	content: "\f082"
+
+.loading-wrapper
+	width: r(50px)
+	height: r(50px)
+	@extend .absolute-center
+	@apply transition-all duration-300 opacity-0 pointer-events-none z-5
+	@apply scale-75
+	&.active
+		@apply scale-100
+		@apply opacity-100
+	.loading
+		border: r(8px) solid
+		@apply relative w-full h-full
+		@apply border-primary z-5 rounded-full border-t-transparent
+		@apply rounded-full animate-spin
+
+ul
+	&.list-check
+		padding-left: r(10px)
+		@apply list-none
+		li
+			padding-left: r(10px)
+			&::marker
+				content: '\f00c'
+				font-size: r(12px)
+				@apply font-Awesome6 font-normal text-secondary mr-15px
+	&.check-primary
+		li
+			&::marker
+				@apply text-primary

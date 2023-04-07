@@ -1,0 +1,78 @@
+section.home-1 
+	.container 
+		+NavigationCategory("fa-thin fa-house", ">", "Manufacturing")
+
+section.home-2
+	.container 
+		.grid.gap-28(class="grid-cols-12")
+			div(class="lg:col-span-6")
+				.px-3
+					h2.font-bold.text-40px.text-t3.mb-5 Gasket
+					.flex.justify-between
+						ul.mb-5 
+							+ListCategoryHome-8("Spiral Wound Gasket")
+							+ListCategoryHome-8("Seat Gasket")
+							+ListCategoryHome-8("Sello Seal Gasket")
+							+ListCategoryHome-8("Isolated Gasket")
+							+ListCategoryHome-8("Heat Exchanger Gasket")
+						ul.mb-5 
+							+ListCategoryHome-8("Low Stress Gasket")
+							+ListCategoryHome-8("Cage Gasket")
+							+ListCategoryHome-8("Body Gasket")
+							+ListCategoryHome-8("Carbon Gasket")
+							+ListCategoryHome-8("Die-Formed Ring")
+						ul.mb-5 
+							+ListCategoryHome-8("Ring Type Joint Gasket")
+							+ListCategoryHome-8("Graphite gasket")
+							+ListCategoryHome-8("Camprofile Gasket")
+							+ListCategoryHome-8("Camprofile Gasket")
+					p.font-normal.text-18px.text-t3.mb-5 A.W. Chesterton Company offers in-depth engineering experience in the design of custom piston seal, wiper seal, and rod seal solutions for fluid power equipment. We help equipment manufacturers solve difficult sealing challenges across a broad range of industrial applications. Our custom designs provide leading-edge technology that has been used around the world with documented success and garnered recognition by customers and peers.
+					h3.font-bold.text-24px.text-e1 Our range of services includes:
+					ul.mb-5 
+						+ListCateCircleHome-8("Common and custom product profiles and descriptions")
+						+ListCateCircleHome-8("Design guidance and engineer-to-engineer collaboration")
+						+ListCateCircleHome-8("Materials selection")
+						+ListCateCircleHome-8("Fluid compatibility recommendations")
+						+ListCateCircleHome-8("Troubleshooting")
+					h3.font-bold.text-24px.text-e1.mb-5 Our engineering expertise includes
+					ul.mb-5 
+						+ListCateCircleHome-8("​Cylinders")
+						+ListCateCircleHome-8("Actuators")
+						+ListCateCircleHome-8("Presses")
+						+ListCateCircleHome-8("Directional Control Valves")
+					
+					button.btn-download.mb-5
+						i(class="fa-thin fa-file-pdf mr-2")
+						| DOWNLOAD BROCHURE
+
+			div(class="lg:col-span-6")
+				img(src="./img/home/home-8/h-1.webp")
+
+section.home-3
+	.bg-f5 
+		.container 
+			h2.font-bold.text-24px.text-center.text-e1.pt-10.pb-5 Related Manufacturing
+			.relative 
+				.swiper.mySwiper.h-full
+					.swiper-wrapper.mb-20
+						+ListRelatedHome-8("./img/home/home-8/h-2.webp", "RUBBER LINED SLEEVE...", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+						+ListRelatedHome-8("./img/home/home-8/h-3.webp", "PUMP PARTS", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+						+ListRelatedHome-8("./img/home/home-8/h-4.webp", "BUSHING", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+						+ListRelatedHome-8("./img/home/home-8/h-5.webp", "SLEEVES", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+						+ListRelatedHome-8("./img/home/home-8/h-2.webp", "PUMP PARTS", "solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+						+ListRelatedHome-8("./img/home/home-8/h-4.webp", "RUBBER LINED SLEEVE...", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+				.button-next
+					i(class="fa-light fa-angle-right mt-2")
+				.button-prev
+					i(class="fa-light fa-angle-left mt-2")
+
+script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+script.
+	var swiper = new Swiper(".mySwiper", {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		navigation: {
+		nextEl: ".button-next",
+		prevEl: ".button-prev",
+	  },
+	});

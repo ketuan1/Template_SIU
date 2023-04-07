@@ -1,0 +1,347 @@
+.cartpage
+	.filter-wrapper
+		max-width: 370px
+		.amount
+			@media (min-width: 576px)
+				flex: 0 0 150px
+			.amount-wrapper
+				border-radius: 4px
+				border: thin solid #E1E1E1
+				overflow: hidden
+			input
+				width: 100%
+				font-weight: 400
+				font-size: 16px
+				color: #666666
+				text-align: center
+
+		[class*='btn-']
+			flex: 0 0 35px
+			height: 33px
+			display: flex
+			justify-content: center
+			align-items: center
+			background: #F5F5F5
+			cursor: pointer
+		.size
+			margin-left: 10px
+			flex: 0 0 60%
+			white-space: nowrap
+			@media (min-width: 576px)
+				margin-left: 0
+				flex: 0 0 200px
+			.sort-title
+				height: 35px
+				background: #F5F5F5
+				border: thin solid #E1E1E1
+				border-radius: 4px
+				padding: 7px 15px
+				@media (min-width: 576px)
+					padding: 7px 30px
+				em
+					font-weight: 400
+					font-size: 16px
+					color: #666666
+					right: 5px
+					@media (min-width: 576px)
+						right: 30px
+			li
+				a
+					padding: 7px 30px
+					display: block
+					transition: .3s all ease-in-out
+					&:hover
+						background: #ccc
+	.cart-product-item
+		& + .cart-product-item
+			margin-top: 15px
+		.cart-product-item-img
+			a
+				+img-ratio(1.5/2)
+				width: 100%
+		.cart-product-item-content-left
+			.cart-product-item-caption
+				padding-right: 25px
+			.remove-item
+				cursor: pointer
+				position: absolute
+				top: 0
+				right: 0
+				width: 25px
+				height: 25px
+				display: flex
+				justify-content: center
+				align-items: center
+				@apply rounded-full transition-all
+				&:hover
+					background-color: #f00
+					em
+						color: #fff
+						transform: scale(0.75)
+				em
+					color: orange
+					font-size: r(20px)
+					@apply transition-all
+	.cart-inner,.cart-aside
+		padding: 15px 15px 30px
+		border-radius: 15px
+		background-color: #fff
+		box-shadow: 0px 0px 15px rgba(#000 ,.15 )
+.cart-step-info
+	.receive-address,.payment-info,.minicart
+		padding: 15px 15px 30px
+		border-radius: 15px
+		background-color: #fff
+		box-shadow: 0px 0px 15px rgba(#000 ,.15 )
+	.form-group
+		// &.selection
+		label
+			font-weight: 400
+			font-size: 14px
+			color: #f1f1f1
+			margin-bottom: 5px
+			&.error
+				color: #f00
+				font-weight: 500
+		input,textarea,select
+			width: 100%
+			font-weight: 400
+			color: #f1f1f1
+			padding: 13.5px 15px
+			background: #F5F5F5
+			border: thin solid #E1E1E1
+			border-radius: 4px
+			font-size: 14px
+			&::placeholder
+				font-weight: 400
+				font-size: 14px
+				color: #f1f1f1
+		textarea
+			display: block
+		&.form-address
+			textarea
+				min-height: 50px
+		&.form-messenger
+			textarea
+				min-height: 150px
+	.xuat-hoa-don-input
+		margin-top: 20px
+		margin-bottom: 5px
+		input
+			display: none
+			&:checked
+				~ label
+					background-color: #f00
+					padding-top: 5px
+					padding-bottom: 5px
+					padding-right: 10px
+					color: #fff
+					&::before
+						content: "\f14a"
+						font-weight: 900
+						left: 5px
+		label
+			position: relative
+			padding-left: 30px
+			@apply text-base font-normal w-fit cursor-pointer transition-all rounded-lg
+			&::before
+				content: "\f0c8"
+				font-family: "Font Awesome 5 Pro"
+				font-weight: 300
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				font-size: r(15px)
+				@appy transition-all
+	.payment-page
+		.carttable
+			.item
+				padding-top: 20px
+				border-top: thin solid #f1f1f1
+				&.has-gift
+					padding-left: 10px
+					padding-right: 10px
+					padding-bottom: 10px
+					border: thin solid #e1e1e1
+					@apply rounded-lg
+				& + .item
+					margin-top: 15px
+			.product
+				@apply grid grid-cols-12 gap-3
+				.productimg
+					@apply col-span-5
+					a
+						+img-ratio(1/2)
+				.content
+					@apply col-span-7
+			// .bottom
+			.gift-wrapper
+				margin-top: r(20px)
+			.gift
+				ul
+					padding: 0
+				li
+					@apply text-center text-base transition-all font-medium
+					& + li
+						margin-top: 5px
+						padding-top: 5px
+						border-top: thin solid #f1f1f1
+
+					.item-wrapper
+						@apply grid grid-cols-12 gap-3 items-center
+						.image-wrapper
+							@apply col-span-2
+							.img
+								+img-ratio(1/1)
+								img
+									border-radius: 5px
+						.title
+							color: #000
+							@apply col-span-10 text-left lowercase first-letter:uppercase text-sm font-bold  leading-snug
+
+	.payment-info
+		.payment-form
+			& + .payment-form
+				margin-top: 15px
+		.payment-method
+			& + .payment-method
+				margin-top: 10px
+		.cart-form
+			margin-top: 10px
+		.qradio
+			input
+				display: none
+				&:checked
+					~ label
+						padding: 30px
+						background-color: #f5
+						&::before
+							content: "\f14a"
+							font-weight: 900
+							left: 5px
+			label
+				position: relative
+				padding-left: 30px
+				@apply text-base font-normal w-full cursor-pointer transition-all rounded-lg
+				&::before
+					content: "\f0c8"
+					font-family: "Font Awesome 5 Pro"
+					font-weight: 300
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					left: 0
+					font-size: r(15px)
+					transition: .3s all ease-in-out
+				.des
+					@apply text-base font-semibold
+				.method-info
+					@apply flex items-center
+					.img
+						flex: 0 0 60px
+						height: 60px
+						max-width: 60px
+						@apply flex items-center justify-center mr-4
+						img
+							width: 100% !important
+							height: 100% !important
+							@apply rounded-lg overflow-hidden object-contain
+
+	.code-gift-item
+		background-color: #71838C
+		color: #fff
+		padding-left: 10px
+		padding-right: 10px
+		border-radius: 5px
+		.code
+			font-size: r(14px)
+			letter-spacing: 1.4px
+		button
+			padding: 4px 8px
+			font-size: r(14px)
+			border-radius: 5px
+			font-weight: bold
+			color: #fff
+			background-color: rgba(#f00 , .65)
+			transition: .3s all ease-in-out
+			&:hover
+				background-color: #f00
+
+.checkout-page
+	background-color: #f5
+.checkout-login-section
+	.cart-login
+		max-width: 550px
+		width: 100%
+		margin: 0 auto
+		.login-heading
+			text-align: center
+			color: orange
+			font-size: r(32px)
+			margin-bottom: r(30px)
+			font-weight: bold
+			text-align: center
+			text-transform: uppercase
+		.login-form
+			width: 100%
+			background-color: #fff
+			padding: r(30px)
+			margin: 0 auto
+			border-radius: 25px
+		.module-title
+			color: #f00
+			font-size: 14px
+			font-style: italic
+			font-weight: 600
+			margin-top: 10px
+			margin-bottom: 20px
+	.form-group
+		& + .form-group
+			margin-top: 20px
+		label
+			display: none
+		input
+			width: 100%
+			background: #FFFFFF
+			border: thin solid #E1E1E1
+			border-radius: 4px
+			font-weight: 400
+			font-size: r(14px)
+			color: #f1f1f1
+			padding: 10px 15px
+			&::placeholder
+				font-weight: 400
+				font-size: r(14px)
+				color: #f1f1f1
+	.select-group
+		ul
+			padding: 0
+		input
+			display: none
+			&:checked
+				~ label
+					&::before
+						font-weight: 900
+						content: "\f14a"
+						// @apply text-main
+
+		label
+			display: flex
+			align-items: center
+			font-style: normal
+			font-weight: 400
+			font-size: r(16px)
+			color: #111111
+			width: fit-content
+			cursor: pointer
+			&::before
+				transition: .3s all ease-in-out
+				font-size: r(20px)
+				font-family: 'Font Awesome 5 Pro'
+				color: #999
+				font-weight: 300
+				content: "\f0c8"
+				margin-right: 10px
+				@media (min-width: 576px)
+					margin-right: 20px

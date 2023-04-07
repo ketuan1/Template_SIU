@@ -1,0 +1,175 @@
+.account-page
+	background: #F5F5F5
+	.col-left
+		@apply col-span-full lg:col-span-3
+	.col-right
+		@apply col-span-full lg:col-span-9
+	.grid-wrapper
+		@apply grid grid-cols-12 gap-5 xl:gap-30px
+	.user-sidebar
+		padding: r(20px) r(10px)
+		top: calc(30/1920*100rem + var(--fixed-header-height))
+		@apply bg-primary sticky rounded-5px
+		@media (min-width: 1280px)
+			padding: r(20px)
+			padding-bottom: r(30px)
+		figcaption
+			@apply font-bold text-2xl text-white mb-5
+	.user-sidelink
+		ul
+			@apply list-none p-0
+			a
+				border-top: thin solid rgba(#FFFFFF,.2)
+				border-bottom: thin solid rgba(#FFFFFF,.2)
+				padding: r(8px) r(10px)
+				@apply block font-normal text-lg leading-24px text-white transition-all
+				@media (min-width: 1280px)
+					padding: r(11px) r(20px)
+			li
+				&.active,&:hover
+					a
+						@apply bg-secondary
+	.user-page
+		background: #FFFFFF
+		box-shadow: 0 r(4px) r(4px) rgba(0, 0, 0, 0.05)
+		border-radius: r(5px)
+		padding: r(20px)
+		@media (min-width: 1280px)
+			padding: r(40px)
+			padding-bottom: r(60px)
+	.form-group
+		@apply w-full mb-5
+		input
+			&:not([type='submit'])
+				padding: r(13px) r(20px)
+				border: thin solid #D1D1D1
+				@apply bg-tertiary
+				@apply w-full
+				@apply font-normal text-base leading-22px text-black
+		.settinglabel
+			@apply font-bold text-base leading-23px text-t6 mb-5px sm:mb-10px
+
+	.block-title
+		@apply mb-30px
+	.account-info
+		@apply flex justify-between flex-wrap
+		table
+			@apply w-full
+		.account-col-left
+			flex: 0 0 100%
+			@apply mb-5 md:mb-0
+			@media (min-width: 768px)
+				flex: 0 0 30%
+			@media (min-width: 1024px)
+				flex: 0 0 calc(255/970*100%)
+			.img
+				@apply rounded-full overflow-hidden
+				@media (max-width: 767.98px)
+					max-width: r(250px)
+					@apply mx-auto
+				a
+					+img-ratio(1/1,cover)
+
+		.account-col-right
+			flex: 0 0 100%
+			@media (min-width: 768px)
+				flex: 0 0 68%
+			@media (min-width: 1024px)
+				flex: 0 0 calc(630/970*100%)
+	.profile-list
+		.block-title
+			@apply md:mb-10
+		.list
+			@apply grid sm:grid-cols-2 md:grid-cols-3 gap-5 xl:gap-30px
+			.img
+				a
+					+img-ratio(1/1)
+			.title
+				box-shadow: 0 0 r(20px) rgba(0, 0, 0, 0.1)
+				padding: r(15px) r(20px)
+				@apply bg-tertiary
+				@apply font-bold text-xl text-primary block
+	.profile-detail
+		.small-title
+			@apply text-secondary mb-3 sm:mb-5 mt-5 sm:mt-10
+		.section-1
+			@media (min-width: 576px)
+				.form-wrapper
+					@apply grid grid-cols-2 gap-x-3
+					.form-group
+						&:nth-of-type(1)
+							@apply col-span-full
+	.progress-list
+		padding-left: r(25px)
+		@apply relative
+		@apply grid gap-5
+		@media (min-width: 1024px)
+			padding-left: r(55px)
+		&::before
+			content: ''
+			width: r(6px)
+			@apply h-full bg-tertiary left-0 top-0 absolute
+		.item
+			border: r(4px) solid
+			@apply border-transparent
+			@apply bg-tertiary rounded-10px
+			@apply p-5 relative transition-all
+			&.active + .item.active
+				&::after
+					top: r(-24px)
+					height: calc(100%+8/1920*100rem + 20/1920*100rem)
+			&::before
+				content: ''
+				width: r(20px)
+				height: r(20px)
+				background: #FFFFFF
+				left: r(-36px)
+				border: thin solid #0F4F73
+				@apply absolute top-1/2 -translate-y-1/2 rounded-full z-2 bg-white
+				@media (min-width: 1024px)
+					left: r(-66px)
+			&::after
+				content: ''
+				width: r(6px)
+				background: #FFFFFF
+				height: calc(100%+8/1920*100rem)
+				top: r(-4px)
+				left: r(-29px)
+				@apply absolute
+				@apply bg-transparent
+				@media (min-width: 1024px)
+					left: r(-59px)
+			&.active
+				@apply border-secondary bg-white
+				&::after
+					@apply bg-secondary
+				&::before
+					@apply border-secondary
+				.title
+					@apply text-secondary
+				.content
+					p
+						&::before
+							@apply text-secondary
+		.title
+			text-shadow: 0 0 r(25px) rgba(0, 0, 0, 0.1)
+			@apply font-bold text-base leading-23px text-primary mb-5px
+		.content
+			* + *
+				@apply mt-2
+			p
+				@apply flex items-center
+				@apply text-primary font-normal text-base leading-22px text-black
+				&::before
+					content: '\f00c'
+					@apply font-Awesome6 mr-5px font-black text-xs text-primary
+.changepasswordpage
+	.account-page
+		.account-form
+			input
+				&:not([type='submit'])
+					@apply bg-white text-t6
+.global-breadcrumb
+	.content-header
+		.text-dark
+			@apply hidden

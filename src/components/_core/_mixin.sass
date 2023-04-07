@@ -1,0 +1,52 @@
+@function r($size)
+	@return ($size/1920px*100)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	height: 0
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+=line($line)
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-line-clamp: $line
+	-webkit-box-orient: vertical
+=hover-underline($ratio, $color)
+	position: relative
+	transition: background-size .6s ease
+	background-image: linear-gradient(180deg,transparent $ratio, $color 0)
+	background-repeat: no-repeat
+	background-size: 0 100%
+	&:hover
+		background-size: 100% 100%
+=type-none
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+@mixin columnsjs
+	display: flex
+	flex-wrap: wrap
+	gap: r(20px)
+	@media (min-width: 1280px)
+		gap: r(30px)
+	@for $i from 1 through 9
+		&[data-columns="#{$i}"]
+			& > *
+				flex-basis: calc(100% / #{$i})
+				@media (min-width: 576px)
+					flex-basis: calc(calc(100% / #{$i}) - calc(10/1920*100rem))
+				@media (min-width: 1280px)
+					flex-basis: calc(calc(100% / #{$i}) - calc(15/1920*100rem))
+
+#auto-column
+	@include columnsjs

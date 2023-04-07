@@ -1,0 +1,39 @@
+.bn
+	@extend .zoom-img
+	time
+		@apply font-normal text-xs leading-17px text-t9
+	.cat
+		@apply font-bold text-xs leading-17px text-primary
+		@apply flex items-center
+		&::before
+			content: ''
+			flex: 0 0 r(2px)
+			width: r(2px)
+			height: r(2px)
+			background: #999999
+			@apply mx-10px flex
+	.title
+		@apply transition-all
+	.infos
+		@apply flex items-center mt-15px mb-25px
+	&.bn-1
+		padding: r(20px) r(20px) r(40px)
+		@apply bg-white flex flex-col h-full
+		@media (min-width: 1280px)
+			padding: r(30px) r(30px) r(60px)
+		.img
+			a
+				+img-ratio(260/390)
+		.title
+			text-shadow: r(0px) r(0px) r(25px) rgba(0, 0, 0, 0.1)
+			@apply text-15
+			@apply font-bold text-xl
+			@apply line-clamp-2
+		.ctn
+			text-shadow: r(0px) r(0px) r(25px) rgba(0, 0, 0, 0.1)
+			@apply mt-15px
+			@apply font-normal text-base leading-22px
+			@apply line-clamp-3
+		&:hover
+			.title
+				@apply text-primary

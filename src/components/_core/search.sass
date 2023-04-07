@@ -1,0 +1,47 @@
+.search.search-results
+	footer
+		@apply mt-0
+.search-page
+	background-color: #f0f0f2
+	.search-form
+		form
+			@apply relative
+			input
+				padding: r(10px) r(20px)
+				border: thin solid
+				padding-right: r(45px)
+				@apply w-full bg-transparent transition-all rounded-lg
+				&:not(:placeholder-shown)
+					@apply bg-primary border-transparent text-white
+			button
+				width: r(40px)
+				@apply h-full absolute top-0 right-0 flex items-center justify-center
+	.search-query
+		@apply my-15px
+	.found-nothing
+		background-image: url(../img/nothing.png)
+		height: 30vh
+		@apply bg-no-repeat bg-center
+	.found-nothing-title
+		@apply text-xl uppercase relative font-bold text-primary
+	.list-search
+		@apply grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4
+		@apply gap-10px md:gap-5
+.wp-pagination
+	@apply mt-30px
+	ul
+		@apply list-none flex items-center flex-wrap gap-10px p-0 justify-center
+		li
+			@apply flex items-center justify-center transition-all uppercase
+			@apply font-bold text-xl text-t6
+			a
+				width: r(40px)
+				height: r(40px)
+				background-color: #eee
+				@apply flex items-center justify-center rounded-full
+				@media (min-width: 1280px)
+					width: r(36px)
+					height: r(36px)
+			&.active,&:hover
+				a
+					@apply bg-primary text-white

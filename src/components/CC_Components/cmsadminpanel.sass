@@ -1,0 +1,236 @@
+.cmsadminpanel
+	z-index: 9999
+	font-size: 14px
+	position: fixed
+	bottom: 0
+	right: 0
+	@media (max-width: 575.98px)
+		display: none
+	#toggleCmsPanel
+		display: flex
+		align-items: center
+		border: thin solid black
+		background-color: #262524
+		width: fit-content
+		margin: 0 auto
+		transition: .3s all ease-in-out
+		position: relative
+		height: auto
+		padding: 0 10px
+		border-radius: 10px 0 0 0
+		.title
+			font-weight: 500
+			font-size: 14px
+			margin-right: 15px
+			color: #fff
+		.btn-toggle
+			position: relative
+			background-color: #f1f1f1
+			border-radius: 50px
+			cursor: pointer
+			overflow: hidden
+			transition: .3s all ease-in-out
+			width: 60px
+			height: 30px
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				border-radius: 50px
+				background-color: #ccc
+				transition: .3s all ease-in-out
+				width: 25px
+				height: 25px
+				left: 5px
+	&.active
+		#toggleCmsPanel
+			border-radius: 0
+			.btn-toggle
+				background-color: #164440
+				&::before
+					background-color: #fff
+					left: calc( 100% - 30px)
+		nav
+			transform: translateY(0)
+			ul
+				transform: translateY(0)
+	nav
+		display: flex
+		width: max-content
+		transition: .3s all ease-in-out
+		flex-direction: row-reverse
+		@media (max-width: 1023.98px)
+			transform: translateY(40px)
+
+			flex-direction: column
+	ul
+		display: flex
+		background-color: #262524
+		overflow: hidden
+		box-shadow: 0px 0px 10px rgba(black ,.15 )
+		transition: .3s all ease-in-out
+		border-radius: 0
+		@media (min-width: 1024px)
+			transform: translateY(100%)
+		li
+			display: flex
+			align-items: center
+			font-size: r(16px)
+			justify-content: center
+			white-space: nowrap
+			& + li
+				border-left: thin solid rgba(#fff ,.15 )
+			a
+				color: #fff
+				transition: .3s all ease-in-out
+				text-transform: uppercase
+				border: thin solid #262524
+				padding: 7px 15px
+				z-index: 1
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+					background-color: #485461
+					background-image: linear-gradient(315deg, #485461 0%, #28313b 74%)
+					transition: .3s all ease-in-out
+					opacity: 0
+					z-index: -1
+				&:hover
+					border-color: #fff
+					&::before
+						opacity: 1
+		a
+			display: flex
+			align-items: center
+			height: 100%
+		i
+			font-weight: 300
+			margin-right: 10px
+		select
+			padding: 5px 10px
+			height: calc( 100% - 4px)
+			background-color: transparent
+			color: #fff
+			text-transform: uppercase
+			option
+				color: black
+
+.ActionMenuBorder
+	box-shadow: 0 0 5px #888
+	z-index: -1
+	background: transparent
+	position: absolute
+	padding: 5px 10px
+	left: 50%
+	top: 50%
+	transform: translate(-50%,-50%)
+	width: calc( 100% + 5px )
+	height: calc( 100% + 5px )
+	border: thin #ccc solid
+.relative.Module
+	z-index: 100 !important
+	&:hover
+		z-index: 100 !important
+		.ActionMenuBorder
+			opacity: 100 !important
+	.ActionMenuTag
+		opacity: 1 !important
+.ActionMenu
+	margin: 0
+	padding: 0
+	position: absolute
+	z-index: 906
+	left: 10px
+	top: 10px
+	color: #fff
+	@media (max-width: 575.98px)
+		display: none
+	.ActionMenuBody
+		display: none
+		background: #262524
+		border-radius: 10px
+		text-align: left
+		position: absolute
+		left: 0
+		top: calc( 30px + 2px )
+		min-width: 480px
+		box-shadow: 0 0 5px rgba(black ,.15 )
+		padding: 10px 15px
+		>h4
+			border: 0
+			display: block
+			background: 0
+			padding: 0
+			margin: 5px 0
+			width: auto
+			font-size: 16px
+			font-weight: 600
+
+		>dl
+			overflow: hidden
+			padding: 15px 0
+			width: 100%
+			border-top: thin #ccc solid
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+
+		>dl
+			dd
+				font-weight: 500
+				clear: none
+				font-size: 13px
+				border: 0
+				& + dd
+					margin-left: 20px
+
+				i
+					margin-right: 5px
+
+				a
+					display: block
+					line-height: 16px
+					min-height: 16px
+					text-transform: none
+					font-weight: 400
+					display: flex
+					align-items: center
+					width: auto !important
+					&::after,&::before
+						display: none !important
+					&:hover
+						color: #ff2727
+
+					.ActionLink
+						padding-left: 20px
+
+	.ActionMenuTag
+		background: #262524
+		padding: 5px 10px
+		// border: thin #999 solid
+		border-radius: 3px
+		font-weight: 500
+		font-size: 11px
+		min-width: 65px
+		cursor: default
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 30px
+		color: white
+		white-space: nowrap
+		transition: .3s all ease-in-out
+		i
+			margin-right: 5px
+
+.edit-link
+	pointer-events: visible !important
+	i
+		&::before
+			content: '✏️'

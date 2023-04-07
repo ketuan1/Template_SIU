@@ -1,0 +1,66 @@
+.checkout-complete-section
+	position: relative
+	.complete-logo
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		width: 100%
+		height: 100%
+		background-color: #fff
+		padding: 30px 15px
+		z-index: 10
+		display: flex
+		align-items: center
+		justify-content: center
+		&.active
+			animation: disableLogo 1s 2s ease-in-out forwards
+	svg
+		margin: 0 auto
+		max-height: 100%
+		height: 80%
+		width: 70%
+		@media (min-width: 576px)
+			width: 100%
+		&.active
+			animation: scaleDown 1s 1.5s ease-in-out forwards
+		.svg-elem-1
+			stroke-dashoffset: 3077.45361328125px
+			stroke-dasharray: 3077.45361328125px
+			fill: transparent
+			-webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s
+			transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s
+
+		&.active .svg-elem-1
+			stroke-dashoffset: 0
+			fill: rgb(0, 0, 0)
+			animation: changeColorFill 0.5s 1s ease-in-out forwards, changeStrokeFill 0.5s 1s ease-in-out forwards
+
+		.svg-elem-2
+			stroke-dashoffset: 480.48773193359375px
+			stroke-dasharray: 480.48773193359375px
+			fill: transparent
+			transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s
+
+		&.active .svg-elem-2
+			stroke-dashoffset: 0
+			fill: rgb(0, 0, 0)
+			animation: changeColorFill 0.5s 1s ease-in-out forwards, changeStrokeFill 0.5s 1s ease-in-out forwards
+		&.active .svg-elem-3
+			animation: changeStrokeFill 0.5s 1s ease-in-out forwards
+		.svg-elem-3
+			stroke-dashoffset: 2017.0175280124931px
+			stroke-dasharray: 2017.0175280124931px
+			transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s
+
+		&.active .svg-elem-3
+			stroke-dashoffset: 0
+
+	.article-content
+		p + p
+			margin-top: 15px
+		a,span
+			&.rounded-lg
+				@apply transition-all duration-300
+				&:hover
+					@apply bg-gray-500 text-white

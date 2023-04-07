@@ -1,0 +1,74 @@
+mixin NavigationCategory(icon, vector1, title1, vector2, title2)
+	.flex.px-3.py-3
+		i.text-16px.text-t6.font-normal(class= icon)
+		span.text-16px.text-t6.font-normal.ml-2= vector1
+		p.text-14px.text-t6.font-normal.ml-2= title1
+		span.text-16px.text-t6.font-normal.ml-2= vector2
+		p.text-14px.text-t6.font-normal.ml-2=title2
+
+
+//- list manufacturing home-7
+mixin ListManufacturingHome-7(image, header, desc, btn, icon)
+	div(class="xs:col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3")
+		div
+			img.w-full.h-full(src= image)
+		.bg-t2
+			.px-5.py-3
+				h2.font-bold.text-18px.text-t3.mb-3= header
+				p.font-normal.text-14px.text-t6.mb-3= desc
+				.flex
+					button.font-bold.text-14px.text-t3.uppercase= btn
+					i.font-light.text-xl.text-primary.ml-3(class= icon)
+
+//- list category manufacturing home-8
+mixin ListCategoryHome-8(title)
+	li.list-none.font-medium.text-14px.text-t0(class="hover:text-primary")
+		button.list-cate-space
+		a(href="#")= title
+
+
+//- list category manufacturing circle home-8
+mixin ListCateCircleHome-8(title)
+	li.list-circle.font-normal.text-lg.text-t3= title
+
+//- list swiper home-8
+mixin ListRelatedHome-8(image, header, desc, btn, icon)
+	.swiper-slide
+		img(src= image)
+		.flex.flex-col.bg-t2.px-5.py-3.h-full 
+			h2.font-bold.text-18px.text-t3= header
+			p.font-normal.text-14px.text-t6= desc
+			.flex.mt-auto 
+				button.font-bold.text-14px.text-t3.uppercase= btn
+				i.font-light.text-xl.text-primary.ml-3(class= icon)
+
+
+
+//- list new home-9
+mixin ListNewHome-9(image, image_calender, title_calender, header, desc, btn, icon)
+	.grid.bg-f5.h-full(class="xs:col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4")
+			img.w-full.h-full.object-cover(src= image)
+			.calender
+				img.calender-img(src= image_calender)
+				span.calender-title= title_calender
+			.flex.flex-col.mt-auto.px-8.py-5
+				h2.font-bold.text-xl.text-t3= header
+				p.font-normal.text-14px.text-t6.break-all.mt-5= desc
+				.flex.mt-5
+					button.font-bold.text-14px.text-t3.uppercase= btn
+					i.font-light.text-xl.text-primary.ml-3(class= icon)
+//- list relative home-10
+mixin ListRelativeNewHome-10(date, title)
+	span.font-normal.text-14px.text-t9=  date
+	h5.title-relative.font-bold.text-18px.mb-5= title
+
+
+
+
+//- pagination
+mixin ListPagination(number1, number2, number3)
+	.font-normal.pt-2.pb-20
+		.text-center.mt-7
+			a(href='#').inline-flex.items-center.px-4.py-2.ml-3.text-t2.bg-primary.border.rounded-5px= number1
+			a(href='#').inline-flex.items-center.px-4.py-2.ml-3.border.rounded-5px.text-t3= number2
+			a(href='#').inline-flex.items-center.px-4.py-2.ml-3.border.rounded-5px.text-t3= number3

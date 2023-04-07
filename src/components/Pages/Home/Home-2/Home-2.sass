@@ -1,0 +1,70 @@
+.home-2
+	.thumb
+		padding: r(30px) r(17px)
+		background-color: #E8F5DD
+		@apply rounded-full
+		.swiper
+			height: r(740px)
+		.img
+			@apply relative
+			&::before
+				content: ''
+				border: r(10px) solid transparent
+				@apply absolute inset-0 rounded-full z-3 pointer-events-none transition-all
+			a
+				+img-ratio(1/1,contain)
+				@apply bg-white rounded-full
+				img
+					@apply p-15px
+		.swiper-slide-thumb-active
+			.img
+				&::before
+					@apply border-tertiary
+			.title
+				@apply text-secondary
+		.title
+			@apply mt-5
+	.main
+		.swiper-slide-active
+			.item
+				.img
+					@apply translate-x-0 opacity-100 duration-500
+		.item
+			@apply flex items-center
+			.img
+				flex: 0 0 calc(550/1060*100%)
+				@apply relative z-2
+				@media (min-width: 1280px)
+					@apply transition-all
+					@apply translate-x-10 opacity-0 delay-300
+				a
+					+img-ratio(786/550,contain)
+
+			.box-content
+				flex: 0 0 calc(795/1060*100%)
+				margin-left: calc(-295/1060*100%)
+				@apply bg-tertiary
+			.wrapper
+				padding-left: calc(225/795*100%)
+				padding-top: calc(95/795*100%)
+				padding-bottom: calc(40/795*100%)
+				padding-right: calc(135/795*100%)
+			table
+				@apply w-full
+				tr
+					vertical-align: baseline
+					& + tr
+						@apply mt-30px
+				td
+					@apply text-base
+					@apply text-white
+					&:first-child
+						padding: r(23px) 0
+						width: calc(100/435*100%)
+						@apply font-bold
+					&:nth-of-type(2)
+						width: calc(305/435*100%)
+						@apply font-normal pl-30px
+			.button
+				@apply border-t border-t-secondary border-dashed
+				@apply pt-50px

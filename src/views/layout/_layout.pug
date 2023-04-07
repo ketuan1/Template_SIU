@@ -1,0 +1,48 @@
+block var
+block mixins
+	include ../../views/blocks/mixins.pug
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css")
+		// Style
+		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		link(rel="stylesheet" href="./styles/main.min.css")
+		link(rel="stylesheet" href="./styles/global.min.css")
+		link(rel="stylesheet" href="./styles/fontAwesome.min.css")
+		// Script
+		title=(title || 'Layout')
+	body(class=bodyClass)
+		block header
+			include ../../views/global/Header/header.pug
+		main
+			block main
+		block footer 
+			include ../../views/global/Footer/footer.pug
+
+		//- .search-overlay.fixed(class="transition-all duration-500")
+		//- 	.container(class="max-w-screen-2xl")
+		//- 		.wrapper.w-full
+		//- 			//- .close-search.w-fit.ml-auto.flex.items-center.justify-center
+		//- 			//- 	<em class="fa-light fa-xmark"></em>
+		//- 			form.searchbox.w-full.relative#searchForm
+		//- 				input(placeholder='Tim kiếm...')
+		//- 				button
+		//- 					<em class="far fa-search"></em>
+		#overlay
+		#fixed-tool.select-none
+			a.icon.scrollToTop.backToTopFullPage#scrollToTop.cursor-pointer
+				<em class="fas fa-arrow-to-top"></em> 
+			a.icon
+				<em class="fa-brands fa-facebook-messenger"></em>
+			a.icon
+				<em class="fa-light fa-phone"></em>
+		script(type="text/javascript" src="./scripts/global.min.js") 
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		script(type="text/javascript" src="./scripts/main.min.js") 
+		script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")

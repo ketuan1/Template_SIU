@@ -1,0 +1,28 @@
+.zoom-img
+	overflow: hidden
+	&:hover
+		img
+			transform: scale(1.05)
+	img
+		transition: .3s all ease-in-out
+.zoom-img-out
+	overflow: hidden
+	&:hover
+		img
+			transform: scale(.95)
+	img
+		transition: .3s all ease-in-out
+
+.zoom-img-rotate
+	overflow: hidden
+	&:hover
+		img
+			transform: scale(1.05) rotate(2deg)
+	img
+		transition: .3s all ease-in-out
+
+@keyframes blink_cursor
+	from
+		opacity: 0
+	to
+		opacity: 100

@@ -1,0 +1,121 @@
+.arrow-button
+	.swiper-button-prev
+		left: r(-30px)
+		@media (min-width: 1280px)
+			left: r(-60px)
+		&::after
+			content: "\f060"
+	.swiper-button-next
+		right: r(-30px)
+		@media (min-width: 1280px)
+			right: r(-60px)
+		&::after
+			content: "\f061"
+	.swiper-button-prev,.swiper-button-next
+		margin: 0
+		top: 50%
+		transform: translateY(-50%)
+		width: r(50px)
+		height: r(50px)
+		-webkit-text-stroke: 0
+		border: thin solid
+		@apply rounded-full transition-all
+		@apply bg-white
+		@apply border-secondary
+		@media (min-width: 1280px)
+			width: r(60px)
+			height: r(60px)
+		&::after
+			font-weight: 100
+			font-size: r(32px)
+			@apply font-Awesome6 transition-all text-secondary
+		&:hover
+			@apply bg-primary
+			&::after
+				color: #fff
+	@media (max-width: 1279.98px)
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		.swiper-button-prev,.swiper-button-next
+			margin-top: calc(10/1920*100*1rem)
+			position: static
+			transform: translateY(0)
+		.swiper-button-next
+			margin-left: calc(10/1920*100*1rem)
+	&.no-responsive
+		@media (max-width: 1280px)
+			display: contents
+		.swiper-button-prev,.swiper-button-next
+			position: absolute !important
+			margin: 0 !important
+			top: 50%
+			transform: translateY(-50%)
+		.swiper-button-prev
+			@media (max-width: 1599.98px)
+				left: -calc(40/1920*100*1rem)
+			@media (max-width: 1366px)
+				left: 0
+		.swiper-button-next
+			@media (max-width: 1599.98px)
+				right: -calc(40/1920*100*1rem)
+			@media (max-width: 1366px)
+				right: 0
+		@media (max-width: 1280px)
+			.swiper-button-prev
+				left: calc(10/1920*100*1rem)
+			.swiper-button-next
+				right: calc(10/1920*100*1rem)
+	&.close-arrow
+		@apply flex
+		.swiper-button-prev,.swiper-button-next
+			@apply static translate-y-0
+		.swiper-button-next
+			@apply ml-10px xl:ml-5
+	&.arrow-special
+		.swiper-button-prev,.swiper-button-next
+			width: r(60px)
+			height: r(60px)
+			@apply bg-tertiary border-4 border-white
+			&.swiper-button-disabled
+				@apply opacity-0
+			&::after
+				@apply font-thin text-32px text-white
+			&:hover
+				@apply bg-primary
+		.swiper-button-prev
+			@apply top-0 left-1/2 -translate-x-1/2 -translate-y-1/2
+			&::after
+				content: '\f102'
+		.swiper-button-next
+			@apply bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 top-unset
+			&::after
+				content: '\f103'
+
+.swiper
+	.swiper-lazy-preloader
+		width: r(45px)
+		height: r(45px)
+		@apply border-primary border-t-transparent
+
+.swiper-pagination
+	&.swiper-pagination-bullets
+		line-height: 0
+		height: auto
+		span
+			box-shadow: r(0px) r(0px) r(10px) rgba(0, 0, 0, 0.25)
+			width: r(20px)
+			height: r(4px)
+			@apply bg-white
+			@apply transition-all rounded-none opacity-100
+			&[class*='active']
+				width: r(100px)
+	&.swiper-pagination-2
+		&.swiper-pagination-bullets
+			@apply static
+			span
+				height: r(2px)
+				@apply bg-primary/[.5] opacity-100 rounded-none
+				&[class*='active']
+					@apply bg-primary

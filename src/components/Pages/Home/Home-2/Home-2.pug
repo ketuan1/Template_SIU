@@ -1,0 +1,47 @@
+section.home-2.section.pb-0(setbackground='./img/home/home-2/bg.webp' class='xl:pt-100px')
+	.container
+		.title.heading-h2.font-black.text-center SẢN PHẨM
+		.grid(class='grid-cols-12 gap-30px select-none mt-70px')
+			.col-left(class='col-span-2')
+				.thumb.relative
+					.swiper
+						.swiper-wrapper
+							-for(i=0;i<5;i++)
+								.swiper-slide.cursor-pointer
+									.item
+										.img
+											a
+												img(loading="lazy" src="./img/home/home-2/i-1.webp")
+										.title.heading-text.text-center.transition-all TƯƠNG CHẤM
+					.arrow-button.arrow-special
+						.swiper-button-prev
+						.swiper-button-next
+			.col-right(class='col-span-10 grid grid-cols-10 gap-30px')
+				.col-empty(class='col-span-1')
+				.main.relative(class='col-span-9')
+					.swiper
+						.swiper-wrapper
+							-for(i=0;i<5;i++)
+								.swiper-slide
+									.item
+										.img
+											a
+												img(loading="lazy" src="./img/home/home-2/i-1.webp")
+										.box-content
+											.wrapper
+												.heading-h2.text-white TƯƠNG ỚT TÂY NINH
+												table
+													tr
+														td Thành phần:
+														td Công thức cay đặc biệt từ trái Ớt Chỉ Thiên trứ danh của xứ Tây Ninh
+													tr
+														td Khối lượng:
+														td 270 gram
+													tr
+														td Hạn sử dụng:
+														td 12 tháng
+												.button
+													a.btn.btn-1.mx-auto Xem thêm
+	.section.section-home-3(class='xl:pb-75px')
+		.container
+			.title.heading-h2.font-black.text-center SẢN PHẨM NỔI BẬT

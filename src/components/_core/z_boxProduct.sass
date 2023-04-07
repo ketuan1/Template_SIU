@@ -1,0 +1,42 @@
+.bpd
+	&.bpd-1
+		padding: r(25px) 0 r(50px)
+		@extend .zoom-img-out
+		@apply text-center text-white relative z-2
+		@apply transition-all
+		&::before
+			content: ''
+			background: var(--data-background) no-repeat center
+			mix-blend-mode: multiply
+			@apply absolute inset-0 bg-cover -z-1
+		.img
+			width: calc(290/480*100%)
+			@apply pb-50px mx-auto
+			a
+				@apply mx-auto w-full
+				+img-ratio(420/290,contain)
+		.weight
+			padding: r(5px) r(14.5px)
+			@apply font-bold text-sm bg-primary w-fit mx-auto
+			@apply rounded-5px
+			@apply transition-all
+		.title
+			@apply font-black text-2xl uppercase mt-15px block
+		.link
+			width: r(50px)
+			height: r(50px)
+			@apply flex items-center justify-center mx-auto
+			@apply mt-50px
+			@apply border-white/[.3] rounded-full border
+			@apply transition-all
+			&:hover
+				@apply bg-white
+				em
+					@apply text-secondary
+			em
+				@apply transition-all
+				@apply font-black text-base
+		&:hover
+			background-color: #ccc !important
+			.weight
+				letter-spacing: .5rem

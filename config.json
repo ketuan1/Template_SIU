@@ -1,0 +1,16 @@
+{
+	"font": [
+		"src/fonts/**"
+	],
+	"js": [
+		"bower_components/jquery/dist/jquery.min.js",
+		"node_modules/lozad/dist/lozad.js",
+		"src/js/plugins/tabslet/Tabslet.js",
+		"node_modules/@fancyapps/ui/dist/fancybox.umd.js"
+	],
+	"css": [
+		"src/js/plugins/swiper/swiper.css",
+		"node_modules/@fancyapps/ui/dist/fancybox.css",
+		"node_modules/nouislider/dist/nouislider.min.css"
+	]
+}

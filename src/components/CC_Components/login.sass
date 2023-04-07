@@ -1,0 +1,74 @@
+.loginpage,.passwordrecovery
+	background: #F5F5F5
+	.alert-danger
+		display: block
+		margin-top: 15px
+		@apply text-secondary
+	.card-layout
+		max-width: r(690px)
+		box-shadow: 0 r(4px) r(4px) rgba(0, 0, 0, 0.05)
+		border-radius: r(5px)
+		padding: r(40px) r(15px) r(50px)
+		@apply mx-auto bg-white
+		@media (min-width: 768px)
+			padding: r(40px) r(30px) r(60px)
+	.small-title
+		@apply mt-15px
+.passwordrecovery
+	.card-layout
+		.button
+			@apply mt-30px
+
+.loginpage,.passwordrecovery
+	background-color: #f5
+	#ctl00_mainContent_login1_LoginCtrl_lnkRegisterExtraLink
+		display: none
+	.input-group-append
+		display: none
+	.login-card-body
+		.input-group
+			margin-top: 15px
+			input
+				outline: none
+				padding: r(10px) r(20px)
+				width: 100%
+				height: 50px
+				border: thin solid #D1D1D1
+				@apply bg-white font-normal text-sm text-t6
+		.social-login
+			display: none
+		.icheck-primary
+			display: flex
+			align-items: center
+			padding: 15px 0px
+			input
+				margin-right: 5px
+		input[type="submit"]
+			padding: r(8px) r(30px)
+			letter-spacing: 0.05rem
+			@apply rounded-3xl
+			@apply font-normal text-base
+			@apply text-primary uppercase font-light
+			@apply bg-primary text-white mx-auto
+			&:hover
+				@apply bg-secondary
+	.flex
+		display: flex
+	.justify-between
+		justify-content: space-between
+	.mt-3
+		margin-top: r(15px)
+	.forget-box
+		display: flex
+		justify-content: space-between
+		margin-top: 5px
+		a
+			transition: .3s all ease-in-out
+			&:hover
+				text-decoration: underline
+				@apply text-secondary
+	a
+		transition: .3s all ease-in-out
+		&:hover
+			text-decoration: underline
+			@apply text-secondary

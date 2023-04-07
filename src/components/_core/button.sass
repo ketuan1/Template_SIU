@@ -1,0 +1,17 @@
+.button
+	user-select: none
+	@apply transition-all duration-300
+	*
+		@media (min-width: 576px)
+			white-space: nowrap
+	.btn
+		@apply flex items-center justify-center w-fit transition-all
+	[class*='btn-']
+		padding: r(13px) r(52px)
+		@apply font-bold text-base rounded-5px
+	.btn-1
+		@apply text-white
+		@apply bg-secondary
+		@apply uppercase
+		&:hover
+			@apply bg-primary

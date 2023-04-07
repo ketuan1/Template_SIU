@@ -1,0 +1,34 @@
+.pages
+	margin-top: 30px
+	@media (min-width: 1280px)
+		margin-top: r(30px)
+	.modulepager
+		ul
+			display: flex
+			position: relative
+			justify-content: center
+			flex-wrap: wrap
+			@apply list-none p-0
+		li
+			flex: 0 0 35px
+			margin: 3px !important
+			@media (min-width: 1280px)
+				margin: 0 r(4px) !important
+				flex: 0 0 r(40px)
+			a,span
+				border: 0
+				text-transform: uppercase
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				padding-top: r(11px)
+				padding-bottom: r(7px)
+				transition: .3s all ease-in-out
+				@apply bg-primary font-normal text-base leading-22px text-white
+				&.NextPage,&.LastPage,&.BackPage,&.FirstPage
+					display: none
+				@media (min-width: 1280px)
+			&.active,&:hover
+				a,span
+					@apply bg-secondary
