@@ -7,6 +7,21 @@ mixin NavigationCategory(icon, vector1, title1, vector2, title2)
 		p.text-14px.text-t6.font-normal.ml-2=title2
 
 
+//- //- list swiper service related home-6
+mixin ListServiceHome-6(image, header, desc, btn)
+	.swiper-slide 
+		.flex.flex-row.h-full
+			.flex.w-full
+				img.w-full.h-full.object-covert(src= image)
+			.bg-t1.flex.flex-col.w-full
+				.px-10.py-5
+					h4.font-bold.text-18px.text-t2.mb-5= header
+					p.font-normal.text-sm.text-t2.mb-5= desc
+					div
+						button.btn-view-more.uppercase= btn
+
+
+
 //- list manufacturing home-7
 mixin ListManufacturingHome-7(image, header, desc, btn, icon)
 	div(class="xs:col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3")
@@ -41,7 +56,6 @@ mixin ListRelatedHome-8(image, header, desc, btn, icon)
 			.flex.mt-auto 
 				button.font-bold.text-14px.text-t3.uppercase= btn
 				i.font-light.text-xl.text-primary.ml-3(class= icon)
-
 
 
 //- list new home-9
