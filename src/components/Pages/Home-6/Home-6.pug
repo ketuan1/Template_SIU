@@ -5,15 +5,15 @@ section.home-1
 section.home-2 
 	.container 
 		.grid.gap-20(class="grid-cols-12")
-			div(class="lg:col-span-6")
+			div(class="xs:col-span-12 sm:col-span-8 md:col-span-6 lg:col-span-6")
 				.px-3
 					h2.font-bold.text-40px.text-t3.mb-5 Cylinder Repair
 					p.font-normal.text-18px.text-t3.mb-5 Hydraulic cylinders have been one of the core products for Malm Orstad, and we have therefore built up an unique competence in this line of products, both within our engineering department and with our skilled mechanics. This competency is clearly defined within our daily repairs and overhaul of all types and sizes of hydraulic cylinders.
-					h3.font-bold.text-24px.text-e1 A typical workflow includes the following
-					p.font-normal.text-18px.text-t3 Dismantling and inspection to comprehend the damagesAssess potential improvements and clarify prices with the customerPerform repair/ overhaul or improvements on the equipment received.
-					p.font-normal.text-18px.text-t3 Assemble, pressure test and painting of the equipment.
-					p.font-normal.text-18px.text-t3 Documentation to be provided based on client requirements.
-					p.font-normal.text-18px.text-t3 The workflow will also include third party verification, typically DNV, if required in the above processes.
+					h3.font-bold.text-24px.text-e1.mb-5 A typical workflow includes the following
+					p.font-normal.text-18px.text-t3.mb-5 Dismantling and inspection to comprehend the damagesAssess potential improvements and clarify prices with the customerPerform repair/ overhaul or improvements on the equipment received.
+					p.font-normal.text-18px.text-t3.mb-5 Assemble, pressure test and painting of the equipment.
+					p.font-normal.text-18px.text-t3.mb-5 Documentation to be provided based on client requirements.
+					p.font-normal.text-18px.text-t3.mb-5 The workflow will also include third party verification, typically DNV, if required in the above processes.
 
 					h3.font-bold.text-24px.text-e1.mb-5 Our engineering expertise includes
 					ul.mb-5 
@@ -27,28 +27,25 @@ section.home-2
 					button.btn-download.mb-5
 						i(class="fa-thin fa-file-pdf mr-2")
 						| DOWNLOAD BROCHURE
-			div(class="lg:col-span-6")
+			div(class="xs:col-span-12 sm:col-span-4 md:col-span-6 lg:col-span-6")
 				img(src="./img/home/home-6/h-1.webp")
 
 section.home-3 
 	.bg-f5 
 		.container 
+			h2.font-bold.text-24px.text-center.text-e1.pt-20.mb-5 Related Services
 			.relative 
 				.swiper.mySwiper
-					.swiper-wrapper
-						.swiper-slide Test1
-						.swiper-slide Test1
-						.swiper-slide Test1
-						.swiper-slide Test1
+					.swiper-wrapper.mb-20
+						+ListServiceHome-6("./img/home/home-6/h-2.webp", "GEAR BOX REPAIR", "SIU have the necessary technically qualified manpower, readily available with extensive equipment resources to provide a quality, cost effective range of in-situ service that achieve desired results within acceptably short time frames.", "View More")
+						+ListServiceHome-6("./img/home/home-6/h-3.webp", "CYLINDER REPAIR", "SIU custom designs, manufactures, services and repairs fluid film babbitt bearings and seals to keep large rotating equipment operating more efficiently and reliably over an extended life.", "View More")
+						+ListServiceHome-6("./img/home/home-6/h-2.webp", "GEAR BOX REPAIR", "SIU have the necessary technically qualified manpower, readily available with extensive equipment resources to provide a quality, cost effective range of in-situ service that achieve desired results within acceptably short time frames.", "View More")
+						+ListServiceHome-6("./img/home/home-6/h-3.webp", "CYLINDER REPAIR", "SIU custom designs, manufactures, services and repairs fluid film babbitt bearings and seals to keep large rotating equipment operating more efficiently and reliably over an extended life.", "View More")
 
 				.button-next
 					i(class="fa-light fa-angle-right mt-2")
 				.button-prev
 					i(class="fa-light fa-angle-left mt-2")
-
-
-
-
 
 
 script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
@@ -60,4 +57,26 @@ script.
 		nextEl: ".button-next",
 		prevEl: ".button-prev",
 	  },
+	  breakpoints: {
+			480: {
+				slidesPerView: 1,
+				spaceBetween: 16,
+				resistanceRatio: 0.85
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				resistanceRatio: 0.85
+			},
+			980: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				resistanceRatio: 0.85
+			},
+			1280: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+				resistanceRatio: 0
+			}
+		}
 	});

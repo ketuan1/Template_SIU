@@ -1,0 +1,51 @@
+section.home-1.bg-f5 
+	.container 
+		+NavigationCategory("fa-thin fa-house", ">", "Product")
+
+section.home-2
+	.container 
+		.grid.gap-2(class="grid-cols-12")
+			div(class="lg:col-span-6")
+				.flex
+					.swiper.mySwiper(thumbsslider='')
+						.swiper-wrapper
+							.swiper-slide
+								img(src="./img/home/home-4/h-2.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-3.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-4.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-5.webp")
+					.swiper.mySwiper2(style='--swiper-navigation-color: #fff; --swiper-pagination-color: #fff')
+						.swiper-wrapper
+							.swiper-slide
+								img(src="./img/home/home-4/h-1.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-1.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-1.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-1.webp")
+					
+			div(class="lg:col-span-6") Test 
+
+script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+script.
+	var swiper = new Swiper(".mySwiper", {
+		direction: 'vertical',
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesProgress: true,
+		thumbs: {
+		swiper: swiper,
+		},
+	});
+	var swiper2 = new Swiper(".mySwiper2", {
+		spaceBetween: 10,
+		thumbs: {
+		swiper: swiper,
+		},
+	});
+		
