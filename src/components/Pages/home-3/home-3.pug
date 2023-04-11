@@ -1,0 +1,74 @@
+section.home-1.bg-f5 
+	.container 
+		+NavigationCategory("fa-thin fa-house", ">", "Gasket")
+
+section.home-2
+	.container 
+		ul.flex.flex-wrap.mt-5
+			+ListCateProductHome-3("All")
+			+ListCateProductHome-3("Spiral Wound Gasket")
+			+ListCateProductHome-3("Seat Gasket")
+			+ListCateProductHome-3("Sello Seal Gasket")
+			+ListCateProductHome-3("solated Gasket")
+			+ListCateProductHome-3("Heat Exchanger Gasket")
+			+ListCateProductHome-3("Low Stress Gasket")
+			+ListCateProductHome-3("Cage Gasket")
+			+ListCateProductHome-3("Body Gasket")
+			+ListCateProductHome-3("Carbon Gasket")
+			+ListCateProductHome-3("Die-Formed Ring")
+			+ListCateProductHome-3("Ring Type Joint Gasket")
+			+ListCateProductHome-3("Graphite gasket")
+			+ListCateProductHome-3("Camprofile Gasket")
+			+ListCateProductHome-3("PTFE Gasket")
+		.px-3
+			.flex.mt-20 
+				h5.font-normal.text-18px.text-t9.m-2 Sort by
+				.border-sort
+					button#multiLevelDropdownButton.sort__border.text-base.font-medium.px-4.text-center.inline-flex.items-center(data-dropdown-toggle='dropdown' class='py-2.5' type='button')
+						| New
+						svg.w-4.h-4.ml-48(aria-hidden='true' fill='none' stroke='currentColor' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+							path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7')
+				#dropdown.z-10.hidden.bg-white.divide-y.divide-gray-100.rounded-lg.shadow.w-44(class='dark:bg-gray-700')
+					ul.py-2.text-sm.text-gray-700(class='dark:text-gray-200' aria-labelledby='multiLevelDropdownButton')
+						li.list-none 
+							a.block.px-4.py-2(href='#')
+								| Spiral
+								| Wound Gasket
+						li.list-none
+							button#doubleDropdownButton.flex.items-center.justify-between.w-full.px-4.py-2(data-dropdown-toggle='doubleDropdown' data-dropdown-placement='right-start' type='button' class='hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white')
+								| Gasket
+								svg.w-4.h-4(aria-hidden='true' fill='currentColor' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
+									path(fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd')
+							#doubleDropdown.z-10.hidden.bg-white.divide-y.divide-gray-100.rounded-lg.shadow.w-44
+								ul.py-2.text-sm(aria-labelledby="doubleDropdownButton")
+									li.list-none 
+										a.block.px-4.py-2(href='#')
+											| Seal Gasket
+									li.list-none 
+										a.block.px-4.py-2(href='#')
+											| Gasket
+									li.list-none
+										a.block.px-4.py-2(href='#')
+											| Billing
+									li.list-none 
+										a.block.px-4.py-2(href='#')
+											| Rewards
+						li.list-none
+							a.block.px-4.py-2(href='#') Earnings
+
+
+		.grid.gap-10.mt-10(class="grid-cols-12")
+			+ListProductNewHome-3("New", "./img/home/home-3/h-1.webp", "195 SYNTHETIC FIBER GASKET", "View More")
+			+ListProductNewHome-3("New", "./img/home/home-3/h-2.webp", "198 CORRISION-RESISTANT GRAPHITE GASKET", "View More")
+			+ListProductNewHome-3("New", "./img/home/home-3/h-3.webp", "359 GRAPHITE GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-4.webp", "CAMPROFILE SEMI-METALLIC GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-5.webp", "455 ARAMID FIBER GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-6.webp", "122NN DIAGHRAGM SHEET GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-7.webp", "CAMPROFILE SEMI-METALLIC GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-1.webp", "455 ARAMID FIBER GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-9.webp", "455 ARAMID FIBER GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-10.webp", "122NN DIAGHRAGM SHEET GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-11.webp", "CAMPROFILE SEMI-METALLIC GASKET", "View More")
+			+ListProductHome-3("./img/home/home-3/h-12.webp", "122NN DIAGHRAGM SHEET GASKET", "View More")
+
+		+ListPagination("1", "2", "3")

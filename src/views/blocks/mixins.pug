@@ -6,6 +6,37 @@ mixin NavigationCategory(icon, vector1, title1, vector2, title2)
 		span.text-16px.text-t6.font-normal.ml-2= vector2
 		p.text-14px.text-t6.font-normal.ml-2=title2
 
+//- list category product title home-3
+mixin ListCateProductHome-3(title)
+	li.list-none.font-medium.text-14px.text-t0.mr-10.mt-3(class="hover:text-primary")
+		button.list-cate-space
+		a(href="#")= title
+
+//- list product home-3
+mixin ListProductHome-3(image, header, btn)
+	div(class="lg:col-span-3")
+		.flex.flex-col.h-full.border-product
+			.product-img
+				img(src= image class=" text-center w-full h-full object-cover")
+			.flex.flex-col.mt-auto
+				h2.font-bold.text-18px.text-t3.text-center.mb-10.mt-5= header
+				.text-center
+					button.btn-view.mb-7.mt-auto= btn
+
+mixin ListProductNewHome-3(news, image, header, btn)
+	div(class="lg:col-span-3")
+		.flex.flex-col.h-full.border-product
+			.relative.top-7
+				span.title-new.uppercase= news
+			.product-img
+				img(src= image class=" text-center w-full h-full object-cover")
+			.flex.flex-col.mt-auto
+				h2.font-bold.text-18px.text-t3.text-center.mb-10.mt-5= header
+				.text-center
+					button.btn-view.mb-7= btn
+
+
+
 
 //- //- list swiper service related home-6
 mixin ListServiceHome-6(image, header, desc, btn)
