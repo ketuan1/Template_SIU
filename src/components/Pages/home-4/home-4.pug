@@ -4,10 +4,24 @@ section.home-1.bg-f5
 
 section.home-2
 	.container 
-		.grid.gap-2(class="grid-cols-12")
+		.grid.gap-20.mt-20(class="grid-cols-12")
 			div(class="lg:col-span-6")
-				.flex
-					.swiper.mySwiper(thumbsslider='')
+				.gallery-container
+					.swiper-container.gallery-main
+						.swiper-wrapper
+							.swiper-slide
+								img(src="./img/home/home-4/h-1.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-3.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-4.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-5.webp")
+							.swiper-slide
+								img(src="./img/home/home-4/h-5.webp")
+					//- .button-next
+					//- 	i(class="fa-thin fa-chevron-up")
+					.swiper-container.gallery-thumbs
 						.swiper-wrapper
 							.swiper-slide
 								img(src="./img/home/home-4/h-2.webp")
@@ -17,35 +31,85 @@ section.home-2
 								img(src="./img/home/home-4/h-4.webp")
 							.swiper-slide
 								img(src="./img/home/home-4/h-5.webp")
-					.swiper.mySwiper2(style='--swiper-navigation-color: #fff; --swiper-pagination-color: #fff')
-						.swiper-wrapper
 							.swiper-slide
-								img(src="./img/home/home-4/h-1.webp")
-							.swiper-slide
-								img(src="./img/home/home-4/h-1.webp")
-							.swiper-slide
-								img(src="./img/home/home-4/h-1.webp")
-							.swiper-slide
-								img(src="./img/home/home-4/h-1.webp")
-					
-			div(class="lg:col-span-6") Test 
+								img(src="./img/home/home-4/h-5.webp")
+						//- .button-prev
+						//- 	i(class="fa-thin fa-chevron-down")
+											
+			div(class="lg:col-span-6")
+				span.title-new New
+				h2.font-bold.text-40px.text-t3.mb-5.mt-5 198 CORRISION-RESISTANT GRAPHITE GASKET
+				.border-text.mb-5
+				h3.font-bold.text-18px.text-t3.mb-5 For Extreme High-Temperature Applications
+				p.font-normal.text-18px.text-t3.mb-5 198 is a high-purity graphite sheet gasket with no fillers or binders. 198 contains a corrosion inhibitor that makes it an excellent gasket for almost all environments. It is ideal for use in extreme temperature applications where metal reinforcement cannot be used.
+				.border-text.mb-5
+				button.btn-contact.px-7.py-3
+					i(class="fa-thin fa-phone mr-2")
+					| Contact Us
+				button.btn-downloads.ml-5.px-7.py-3
+					i(class="fa-thin fa-file-pdf mr-2")
+					| Download BroChure
+
+section.home-3 
+	.container 
+		.bg-f5 
+			.flex.flex-wrap.px-10.py-5
+				button.font-700.text-16px.text-t3.bg-t2.px-5.py-2 FEATURES & BENEFITS
+				button.font-700.text-16px.text-t3.bg-t2.px-5.py-2.ml-5 APPLICATIONS
+				buttonfont-700.text-16px.text-t2.bg-e1.px-5.py-2.ml-5 TECHNICAL DATA
+			.px-10
+				h2.font-bold.text-24px.text-e1 TECHNICAL DATA
+				.flex 
+					h3.font-bold.text-18px.text-t3.title-technical Temperature Limit
+					p.font-normal.text-18px.text-t3.desc-technical –240° C (–400° F) to 2760° C(5000° F) in non-oxidizing services 455° C (850° F) in oxidizing services
+				.border-text.mb-5
+				.flex 
+					h3.font-bold.text-18px.text-t3 Pressure Limit
+					p.font-normal.text-18px.text-t3.ml-40 140 bar g (2000 psig), Compressibility (ASTM-F36)40% Creep Relaxation (ASTM-F38) <5% Recovery (ASTM-F36)12 to 17% P x T = 58,000 (°C x bar g)​​ P x T = 1,600,000 (°F x psig)
+				.border-text.mb-5
+				.flex 
+					h3.font-bold.text-18px.text-t3 Color
+					p.font-normal.text-18px.text-t3 Grey
+				span.font-normal.text-14px.text-t9 
+					i(class="fa-thin fa-angles-down")
+					| View more
 
 script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript")
 script.
-	var swiper = new Swiper(".mySwiper", {
-		direction: 'vertical',
-		spaceBetween: 10,
-		slidesPerView: 4,
-		freeMode: true,
+		var galleryThumbs = new Swiper(".gallery-thumbs", {
+		//- centeredSlides: true,
+		centeredSlidesBounds: true,
+		slidesPerView: 6,
+		watchOverflow: true,
+		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
-		thumbs: {
-		swiper: swiper,
+		direction: 'vertical',
+		navigation: {
+			nextEl: '.button-next',
+			prevEl: '.button-prev',
 		},
 	});
-	var swiper2 = new Swiper(".mySwiper2", {
-		spaceBetween: 10,
-		thumbs: {
-		swiper: swiper,
-		},
-	});
+
+	var galleryMain = new Swiper(".gallery-main", {
+		watchOverflow: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		preventInteractionOnTransition: true,
 		
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		}
+	});
+
+	galleryMain.on('slideChangeTransitionStart', function () {
+		galleryThumbs.slideTo(galleryMain.activeIndex);
+	});
+
+	galleryThumbs.on('transitionStart', function () {
+		galleryMain.slideTo(galleryThumbs.activeIndex);
+	});
