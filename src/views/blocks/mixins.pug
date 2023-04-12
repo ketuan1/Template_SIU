@@ -8,29 +8,29 @@ mixin NavigationCategory(icon, vector1, title1, vector2, title2)
 
 //- list category product title home-3
 mixin ListCateProductHome-3(title)
-	li.list-none.font-medium.text-14px.text-t0.mr-10.mt-3(class="hover:text-primary")
+	li.list-none.font-medium.text-14px.text-t0.mr-7.mt-3(class="hover:text-primary")
 		button.list-cate-space
 		a(href="#")= title
 
 //- list product home-3
 mixin ListProductHome-3(image, header, btn)
-	div(class="lg:col-span-3")
-		.flex.flex-col.h-full.border-product
+	div(class="xs:col-span-6 sm:col-span-6 md:col-span-4 lg:col-span-3")
+		.flex.flex-col.h-full.border-product.justify-between
 			.product-img
 				img(src= image class=" text-center w-full h-full object-cover")
-			.flex.flex-col.mt-auto
+			.flex.flex-col.h-full.justify-between
 				h2.font-bold.text-18px.text-t3.text-center.mb-10.mt-5= header
 				.text-center
 					button.btn-view.mb-7.mt-auto= btn
 
 mixin ListProductNewHome-3(news, image, header, btn)
-	div(class="lg:col-span-3")
-		.flex.flex-col.h-full.border-product
+	div(class="xs:col-span-6 sm:col-span-6 md:col-span-4 lg:col-span-3")
+		.flex.flex-col.h-full.border-product.justify-between
 			.relative.top-7
 				span.title-new.uppercase= news
 			.product-img
 				img(src= image class=" text-center w-full h-full object-cover")
-			.flex.flex-col.mt-auto
+			.flex.flex-col.h-full.justify-between
 				h2.font-bold.text-18px.text-t3.text-center.mb-10.mt-5= header
 				.text-center
 					button.btn-view.mb-7= btn

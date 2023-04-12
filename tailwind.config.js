@@ -143,6 +143,7 @@ module.exports = {
 				"2and”5px": "calc(2.5/1920*100*1rem)",
 				"5px": "calc(5/1920*100*1rem)",
 				"10px": "calc(10/1920*100*1rem)",
+				"32px": "calc(32/1920*100*1rem)",
 			},
 		},
 		fontSize: {

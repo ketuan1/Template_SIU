@@ -1,0 +1,58 @@
+section.home-1
+	.swiper.mySwiper
+		.swiper-wrapper
+			.swiper-slide
+				.title
+					h2.title__text SIU INDUSTRY - Solving Tough Equipment Sealing Challenges Through Innovation
+				.background-image
+					img(src="./img/home/home-1/h-1.webp")
+			.swiper-slide
+				.title 
+					h2.title__text SIU INDUSTRY - Solving Tough Equipment Sealing Challenges Through Innovation
+				.background-image
+					img(src="./img/home/home-1/h-1.webp")
+			.swiper-slide
+				.title 
+					h2.title__text SIU INDUSTRY - Solving Tough Equipment Sealing Challenges Through Innovation
+				.background-image
+					img(src="./img/home/home-1/h-1.webp")
+		.swiper-pagination
+
+section.home-2 
+	.container
+		.flex.justify-between.mt-5
+			.flex.flex-col.h-full 
+				p.text-e1 |
+					span.font-normal.text-16px.text-t6.ml-2 Welcome to SIU Industry
+				h5.font-bold.text-30px.text-e1.ml-3 What do you looking for?
+			.flex.flex-wrap
+				.text-center.flex.flex-col.mr-28
+					.bg-t3.text-c1.border.rounded-32px.w-20.h-20
+						i(class="fa-thin fa-toolbox text-30px mt-6")
+					p.font-normal.text-16px.text-t3.text-center Product
+				.text-center.flex.flex-col.mr-28
+					.bg-t3.text-c1.border.rounded-32px.w-20.h-20
+						i(class="fa-light fa-screwdriver-wrench text-30px mt-6")
+					p.font-normal.text-16px.text-t3.text-center Services
+				.text-center.flex.flex-col.mr-28
+					.bg-t3.text-c1.border.rounded-32px.w-20.h-20
+						i(class="fa-light fa-messages-dollar text-30px mt-6")
+					p.font-normal.text-16px.text-t3.text-center FAQ
+				.text-center.flex.flex-col.mr-28
+					.bg-t3.text-c1.border.rounded-32px.w-20.h-20
+						i(class="fa-light fa-bug-slash text-30px mt-6")
+					p.font-normal.text-16px.text-t3.text-center Manufacturing
+
+
+
+
+
+
+script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+script.
+	var swiper = new Swiper(".mySwiper", {
+		pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		},
+	});
