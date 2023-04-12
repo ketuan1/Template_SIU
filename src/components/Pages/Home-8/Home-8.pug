@@ -5,10 +5,10 @@ section.home-1
 section.home-2
 	.container 
 		.grid.gap-28(class="grid-cols-12")
-			div(class="lg:col-span-6")
+			div(class="xs:col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6")
 				.px-3
 					h2.font-bold.text-40px.text-t3.mb-5 Gasket
-					.flex.justify-between
+					.flex.flex-wrap
 						ul.mb-5 
 							+ListCategoryHome-8("Spiral Wound Gasket")
 							+ListCategoryHome-8("Seat Gasket")
@@ -45,26 +45,25 @@ section.home-2
 						i(class="fa-thin fa-file-pdf mr-2")
 						| DOWNLOAD BROCHURE
 
-			div(class="lg:col-span-6")
-				img(src="./img/home/home-8/h-1.webp")
+			div(class="xs:col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6")
+				img.aspect-auto(src="./img/home/home-8/h-1.webp")
 
 section.home-3
-	.bg-f5 
-		.container 
-			h2.font-bold.text-24px.text-center.text-e1.pt-10.pb-5 Related Manufacturing
-			.relative 
-				.swiper.mySwiper.h-full
-					.swiper-wrapper.mb-20
-						+ListRelatedHome-8("./img/home/home-8/h-2.webp", "RUBBER LINED SLEEVE...", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
-						+ListRelatedHome-8("./img/home/home-8/h-3.webp", "PUMP PARTS", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
-						+ListRelatedHome-8("./img/home/home-8/h-4.webp", "BUSHING", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
-						+ListRelatedHome-8("./img/home/home-8/h-5.webp", "SLEEVES", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
-						+ListRelatedHome-8("./img/home/home-8/h-2.webp", "PUMP PARTS", "solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
-						+ListRelatedHome-8("./img/home/home-8/h-4.webp", "RUBBER LINED SLEEVE...", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
-				.button-next
-					i(class="fa-light fa-angle-right mt-2")
-				.button-prev
-					i(class="fa-light fa-angle-left mt-2")
+	.container 
+		h2.font-bold.text-24px.text-center.text-e1.pt-10.pb-5 Related Manufacturing
+		.relative 
+			.swiper.mySwiper.h-full
+				.swiper-wrapper.mb-20
+					+ListRelatedHome-8("./img/home/home-8/h-2.webp", "RUBBER LINED SLEEVE...", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+					+ListRelatedHome-8("./img/home/home-8/h-3.webp", "PUMP PARTS", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+					+ListRelatedHome-8("./img/home/home-8/h-4.webp", "BUSHING", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+					+ListRelatedHome-8("./img/home/home-8/h-5.webp", "SLEEVES", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+					+ListRelatedHome-8("./img/home/home-8/h-2.webp", "PUMP PARTS", "solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+					+ListRelatedHome-8("./img/home/home-8/h-4.webp", "RUBBER LINED SLEEVE...", "Chesterton leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.​​​​", "VIEW MORE", "fa-thin fa-arrow-right")
+			.button-next
+				i(class="fa-light fa-angle-right mt-2")
+			.button-prev
+				i(class="fa-light fa-angle-left mt-2")
 
 script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
 script.
@@ -75,4 +74,29 @@ script.
 		nextEl: ".button-next",
 		prevEl: ".button-prev",
 	  },
+	   breakpoints: {
+	// when window width is >= 320px
+	320: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 480px
+	480: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 640px
+	640: {
+		slidesPerView: 3,
+		spaceBetween: 20
+	},
+	768: {
+		slidesPerView: 4,
+		spaceBetween: 20,
+	},
+	1024: {
+		slidesPerView: 4,
+		spaceBetween: 20,
+	},
+	}
 	});

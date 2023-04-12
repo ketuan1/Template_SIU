@@ -4,26 +4,26 @@ section.home-1
 
 section.home-2 
 	.container 
-		.grid.gap-20(class="grid-cols-12")
-			div(class="lg:col-span-6")
-				.px-24
+		.px-3
+			.grid.gap-20(class="grid-cols-12")
+				div(class="xs:col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6")
+					//- .px-24
 					h2.font-bold.text-40px.text-e1.mb-5 Manufacturing
 					p.font-normal.text-18px.text-t3 Value and efficiency are key drivers for manufacturing firms, and Chesterton is well poised to meet those needs. Our highly-knowledgeable engineers, specialists, and service teams are experienced in a wide range of industries and specific applications challenges.​
-			div(class="lg:col-span-6")
-				img(src="./img/home/home-7/h-1.webp")
+				div(class="xs:col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6")
+					img.object-cover.aspect-auto(src="./img/home/home-7/h-1.webp")
 
 section.home-3
-	.bg-f5 
-		.container
-			.grid.gap-8(class="grid-cols-12")
-				+ListManufacturingHome-7("./img/home/home-7/h-2.webp", "GASKETS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
-				+ListManufacturingHome-7("./img/home/home-7/h-3.webp", "O RINGS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
-				+ListManufacturingHome-7("./img/home/home-7/h-4.webp", "SHIMS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
-				+ListManufacturingHome-7("./img/home/home-7/h-5.webp", "FANS PARTS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
-				+ListManufacturingHome-7("./img/home/home-7/h-6.webp", "RUBBER LINED SLEEVE...", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
-				+ListManufacturingHome-7("./img/home/home-7/h-7.webp", "PUMP PARTS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
-				+ListManufacturingHome-7("./img/home/home-7/h-8.webp", "BUSHING", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
-				+ListManufacturingHome-7("./img/home/home-7/h-9.webp", "SLEEVES", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
-			.text-center
-				button.btn-view-more.mb-5 VIEW MORE 
-					i(class="fa-thin fa-chevron-down ml-3")
+	.container
+		.grid.gap-10(class="grid-cols-12")
+			+ListManufacturingHome-7("./img/home/home-7/h-2.webp", "GASKETS", "SIU leads the way in high-efficiency in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-7("./img/home/home-7/h-3.webp", "O RINGS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-7("./img/home/home-7/h-4.webp", "SHIMS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-7("./img/home/home-7/h-5.webp", "FANS PARTS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-7("./img/home/home-7/h-6.webp", "RUBBER LINED SLEEVE...", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-7("./img/home/home-7/h-7.webp", "PUMP PARTS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-7("./img/home/home-7/h-8.webp", "BUSHING", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-7("./img/home/home-7/h-9.webp", "SLEEVES", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+		.text-center
+			button.btn-view-more.mb-5 VIEW MORE 
+				i(class="fa-thin fa-chevron-down ml-3")

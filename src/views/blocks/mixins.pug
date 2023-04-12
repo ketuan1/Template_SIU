@@ -37,7 +37,6 @@ mixin ListProductNewHome-3(news, image, header, btn)
 
 
 
-
 //- //- list swiper service related home-6
 mixin ListServiceHome-6(image, header, desc, btn)
 	.swiper-slide 
@@ -55,16 +54,16 @@ mixin ListServiceHome-6(image, header, desc, btn)
 
 //- list manufacturing home-7
 mixin ListManufacturingHome-7(image, header, desc, btn, icon)
-	div(class="xs:col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3")
+	div(class="xs:col-span-6 sm:col-span-6 md:col-span-4 lg:col-span-3")
 		div
 			img.w-full.h-full(src= image)
 		.bg-t2
 			.px-5.py-3
 				h2.font-bold.text-18px.text-t3.mb-3= header
 				p.font-normal.text-14px.text-t6.mb-3= desc
-				.flex
+				.flex.h-full.justify-between
 					button.font-bold.text-14px.text-t3.uppercase= btn
-					i.font-light.text-xl.text-primary.ml-3(class= icon)
+						i.font-light.text-xl.text-primary.ml-3(class= icon)
 
 //- list category manufacturing home-8
 mixin ListCategoryHome-8(title)
@@ -79,11 +78,11 @@ mixin ListCateCircleHome-8(title)
 
 //- list swiper home-8
 mixin ListRelatedHome-8(image, header, desc, btn, icon)
-	.swiper-slide
+	.swiper-slide.h-auto
 		img(src= image)
 		.flex.flex-col.bg-t2.px-5.py-3.h-full 
-			h2.font-bold.text-18px.text-t3= header
-			p.font-normal.text-14px.text-t6= desc
+			h2.font-bold.text-18px.text-t3.mb-3= header
+			p.font-normal.text-14px.text-t6.mb-2= desc
 			.flex.mt-auto 
 				button.font-bold.text-14px.text-t3.uppercase= btn
 				i.font-light.text-xl.text-primary.ml-3(class= icon)
@@ -91,12 +90,12 @@ mixin ListRelatedHome-8(image, header, desc, btn, icon)
 
 //- list new home-9
 mixin ListNewHome-9(image, image_calender, title_calender, header, desc, btn, icon)
-	.grid.bg-f5.h-full(class="xs:col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-4")
+	.grid.h-full(class="xs:col-span-6 sm:col-span-6 md:col-span-4 lg:col-span-4")
 			img.w-full.h-full.object-cover(src= image)
 			.calender
 				img.calender-img(src= image_calender)
 				span.calender-title= title_calender
-			.flex.flex-col.mt-auto.px-8.py-5
+			.flex.flex-col.mt-auto.px-8.py-5.bg-f5
 				h2.font-bold.text-xl.text-t3= header
 				p.font-normal.text-14px.text-t6.break-all.mt-5= desc
 				.flex.mt-5
@@ -106,8 +105,6 @@ mixin ListNewHome-9(image, image_calender, title_calender, header, desc, btn, ic
 mixin ListRelativeNewHome-10(date, title)
 	span.font-normal.text-14px.text-t9=  date
 	h5.title-relative.font-bold.text-18px.mb-5= title
-
-
 
 
 //- pagination
