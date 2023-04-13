@@ -1,29 +1,84 @@
-nav.px-2.py-3(class="bg-white border-gray-200 sm:px-4 py-2.5 rounded container mx-auto nav-main")
-	div(class="container flex flex-wrap items-center justify-between mx-auto")
-		a(href="#" class="flex items-center")
-			img(src='../img/home/logo.webp' alt='logoSIU')
+//- nav.px-2.py-3(class="bg-white border-gray-200 sm:px-4 py-2.5 rounded container mx-auto nav-main")
+//- 	div(class="container flex flex-wrap items-center justify-between mx-auto")
+//- 		a(href="#" class="flex items-center")
+//- 			img(src='../img/home/logo.webp' alt='logoSIU')
 		
-		button(data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false")
-			span(class="sr-only") Open main menu
-			svg(class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg")
-				path(fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd")
-		div(class="hidden w-full md:block md:w-auto" id="navbar-default")
+//- 		button(data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false")
+//- 			span(class="sr-only") Open main menu
+//- 			svg(class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg")
+//- 				path(fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd")
+//- 		div(class="hidden w-full md:block md:w-auto" id="navbar-default")
 
-			ul.nav-menu.font-bold.uppercase.text-16px.text-center.text-t3.flex.flex-col.p-4.mt-4(class='md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium')
-				li
-					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3
-						i(class="fa-thin fa-house")
+//- 			ul.nav-menu.font-bold.uppercase.text-16px.text-center.text-t3.flex.flex-col.p-4.mt-4(class='md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium')
+//- 				li
+//- 					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3
+//- 						i(class="fa-thin fa-house")
 
+//- 				li
+//- 					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-5.font-bold.text-16px.text-t3 About Us
+//- 				li
+//- 					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 Products
+//- 				li
+//- 					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 Service
+//- 				li
+//- 					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 Manufacturing
+//- 				li
+//- 					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 News
+//- 				li
+//- 					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 Contact Us
+
+
+.bg-white.border-gray-200.px-2.rounded(class='py-2.5 lg:justify-items-center')
+	.container.flex.flex-wrap.items-center.justify-between.mx-auto
+		a.flex.items-center(href='#')
+			img.h-9.w-full(src='../img/home/logo.webp' class='md:h-[49px] md:w-[214px]' alt='SIULogo')
+		button.inline-flex.items-center.p-2.ml-3.text-lg.text-gray-500.rounded-lg(type='button' onclick='toggleMenu()' class='lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200')
+			i.fa-solid.fa-bars
+		#navbarShow.hidden.w-full(class='lg:block lg:w-auto lg:pb-3')
+			ul.mt-4.border.border-gray-100.rounded-lg.bg-gray-50.text-base.font-bold.border-none.uppercase(class='lg:flex lg:space-x-8 2xl:space-x-10 md:bg-white')
 				li
-					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-5.font-bold.text-16px.text-t3 About Us
+					a.flex.py-2.pl-3.pr-4.rounded(href='home.html' class='text-[#333333] hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#E41623] lg:hover:underline lg:p-0')
+					i.fa-solid.fa-house.logohome
+				li 
+					a.flex.py-2.pl-3.pr-4.rounded(href='about.html' class='text-[#333333] hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#E41623] lg:hover:underline lg:p-0') ABOUT US
+				li 
+					button#mega-menu-dropdown-button.flex.py-2.pl-3.pr-4.rounded(data-dropdown-toggle='mega-menu-dropdown' class='text-[#333333] hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#E41623] lg:hover:underline lg:p-0')
+						| PRODUCTS 
+						svg.w-5.h-5.ml-1(aria-hidden='true' class='md:w-4 md:h-4' fill='currentColor' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
+							path(fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd')
+					#mega-menu-dropdown.absolute.z-10.grid.hidden.w-auto.grid-cols-2.text-sm.bg-white.border.border-gray-100.rounded-lg.shadow-md(class='lg:grid-cols-4')
+						.p-4.pb-0.text-gray-900(class='md:pb-4')
+							ul.space-y-4(aria-labelledby='mega-menu-dropdown-button')
+								h3.font-bold.text-lg.uppercase.pt-4(class='text-[#E41623]') Gasket
+								ul.font-normal.text-sm
+									li.py-2(class='hover:text-[#E41623]')
+										a(href='#')
+											i.fa-solid.fa-square.mr-2 Spiral Wound Gasket
+									li.py-2(class='hover:text-[#E41623]')
+										a(href='#')
+											i.fa-solid.fa-square.mr-2 PTFE Gasket
+								h3.font-bold.text-lg.uppercase.pt-4(class='text-[#E41623]') Demo
+								ul.font-normal.text-sm
+									li.py-2(class='hover:text-[#E41623]')
+										a(href='#')
+											i.fa-solid.fa-square.mr-2  Degreaser
+							.p-4.text-gray-900
+								ul.space-y-4 
+									h3.font-bold.text-lg.uppercase.pt-4(class='text-[#E41623]') Demo
+									ul.font-normal.text-sm
+										li.py-2(class='hover:text-[#E41623]')
+											a(href='#')
+												i.fa-solid.fa-square.mr-2 Rotary Seal
+										li.py-2(class='hover:text-[#E41623]')
+											a(href='#')
+												i.fa-solid.fa-square.mr-2  V-Rings
 				li
-					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 Products
+					a.flex.py-2.pl-3.pr-4.rounded(href='s-service.html' class='text-[#333333] hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#E41623] lg:hover:underline lg:p-0') SERVICES
 				li
-					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 Service
+					a.flex.py-2.pl-3.pr-4.rounded(href='s-manu.html' class='text-[#333333] hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#E41623] lg:hover:underline lg:p-0') MANUFACTURING
 				li
-					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 Manufacturing
+					a.flex.py-2.pl-3.pr-4.rounded(href='s-news.html' class='text-[#333333] hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#E41623] lg:hover:underline lg:p-0') NEWS
 				li
-					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 News
-				li
-					a(href='#' class='md:hover:bg-transparent md:p-0 hover:text-primary').block.py-2.ml-7.font-bold.text-16px.text-t3 Contact Us
-				
+					a.flex.py-2.pl-3.pr-4.rounded(href='s-contact.html' class='text-[#333333] hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#E41623] lg:hover:underline lg:p-0') CONTACT US
+
+

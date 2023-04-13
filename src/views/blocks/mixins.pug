@@ -6,6 +6,56 @@ mixin NavigationCategory(icon, vector1, title1, vector2, title2)
 		span.text-16px.text-t6.font-normal.ml-2= vector2
 		p.text-14px.text-t6.font-normal.ml-2=title2
 
+
+//- list slider category products home-1
+mixin ListCateProductsHome-1(image, header, desc)
+	.swiper-slide
+		.cate-img
+			img(src= image)
+		.flex.flex-col.mt-auto.relative 
+			.absolute.bottom-20.left-0
+				h3.font-bold.text-20px.text-t2.text-center= header
+				p.font-normal.text-14px.text-t2.text-center= desc
+
+//- list slider products home-1
+mixin ListProductsHome-1(news,image, title, header, btn)
+	.swiper-slide.custom-sl
+		.flex.flex-col.h-full.border-product.justify-between.bg-t2.list-ct
+			.relative.top-7
+				span.title-new.uppercase= news
+			.product-img
+				img.text-center.w-full.h-full.object-cover(src= image)
+			.flex.flex-col.h-full.justify-between
+				p.text-center.font-normal.text-14px.text-e1.mt-2= title
+				h2.font-bold.text-18px.text-t3.text-center.mb-10=  header
+				.text-center
+					button.btn-view.mb-7= btn
+
+//- list Manufacturing home-1
+mixin ListManufacturingHome-1(image, header, desc, btn, icon)
+	div(class="xs:col-span-6 sm:col-span-6 md:col-span-4 lg:col-span-3")
+		div
+			img.w-full.h-full(src= image)
+		.bg-f5.mt-auto.flex.flex-col
+			.px-5.py-3.h-full
+				h2.font-bold.text-18px.text-t3.mb-3= header
+				p.font-normal.text-14px.text-t6.mb-3= desc
+				.flex.h-full.justify-between.mt-auto
+					button.font-bold.text-14px.text-t3.uppercase= btn
+						i.font-light.text-xl.text-primary.ml-3(class= icon)
+
+//- list new home-1
+
+mixin ListNewHome-1(image, header, desc, btn, icon)
+	.swiper-slide
+		img.w-full.h-full.object-cover(src= image)
+		.flex.flex-col.mt-auto.px-8.py-5.bg-t2
+			h2.font-bold.text-xl.text-t3= header
+			p.font-normal.text-14px.text-t6.break-all.mt-5= desc
+			.flex.mt-5
+				button.font-bold.text-14px.text-t3.uppercase= btn
+					i.font-light.text-xl.text-primary.ml-3(class= icon)
+
 //- list category product title home-3
 mixin ListCateProductHome-3(title)
 	li.list-none.font-medium.text-14px.text-t0.mr-7.mt-3(class="hover:text-primary")

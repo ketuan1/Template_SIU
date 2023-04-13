@@ -43,10 +43,73 @@ section.home-2
 						i(class="fa-light fa-bug-slash text-30px mt-6")
 					p.font-normal.text-16px.text-t3.text-center Manufacturing
 
+section.home-3 
+	.container 
+		h2.font-bold.text-40px.text-center.text-e1.pt-20 Catergory Products
+		.relative
+			.swiper.mySwiper1.h-full.mt-7
+				.swiper-wrapper
+					+ListCateProductsHome-1("./img/home/home-1/h-2.webp", "Gasket", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.")
+					+ListCateProductsHome-1("./img/home/home-1/h-3.webp", "Lubricants", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.")
+					+ListCateProductsHome-1("./img/home/home-1/h-4.webp", "Chemicals", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.")
+					+ListCateProductsHome-1("./img/home/home-1/h-5.webp", "Bristle Blaster Tools", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.")
+					+ListCateProductsHome-1("./img/home/home-1/h-6.webp", "Bristle Blaster Tools", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.")
+					+ListCateProductsHome-1("./img/home/home-1/h-4.webp", "Chemicals", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.")
+					+ListCateProductsHome-1("./img/home/home-1/h-2.webp", "Gasket", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.")
+			.button-next
+				i(class="fa-light fa-angle-right mt-2")
+			.button-prev
+				i(class="fa-light fa-angle-left mt-2")
 
+		h2.font-bold.text-40px.text-center.text-primary.mt-20.mb-10 Products
+		.relative 
+			.swiper.mySwiperProduct
+				.swiper-wrapper.mb-20
+					+ListProductsHome-1("new", "./img/home/home-1/h-7.webp", "Lubricants", "WIRE ROPE 455 ARAMID FIBER GASKET", "View More")
+					+ListProductsHome-1("new", "./img/home/home-1/h-8.webp", "O Ring", "D-RINGS", "View More")
+					+ListProductsHome-1("new", "./img/home/home-1/h-9.webp", "Chemicals", "CHESTERTON 273 ELECTRIC MOTOR CLEANER", "View More")
+					+ListProductsHome-1("new", "./img/home/home-1/h-10.webp", "Blasting Machine", "FEED UNIT 170 HP", "View More")
+					+ListProductsHome-1("new", "./img/home/home-1/h-7.webp", "Lubricants", "WIRE ROPE 455 ARAMID FIBER GASKET", "View More")
+			.button-next
+				i(class="fa-light fa-angle-right mt-2")
+			.button-prev
+				i(class="fa-light fa-angle-left mt-2")
 
+section.home-4 
+	.container
+		h2.font-bold.text-40px.text-center.text-primary Services
+					
+section.home-5 
+	img.w-full.object-cover(src="./img/home/home-1/h-13.webp")
+	.flex.flex-col.mt-auto.justify-between.relative 
+		.absolute.bottom-40.left-0
+			h3.font-bold.text-40px.text-t2.text-center Lorem ipsum dolor sit amet
+			p.font-normal.text-18px.text-t2.text-center.px-40.break-all Lorem ipsum dolor sit amet consectetur. Facilisis eget vel ut tincidunt bibendum sapien. Sagittis massa non rhoncus elementum. Massa orci orci dis eget nibh odio. Proin porttitor ut sed donec sapien scelerisque. Iaculis tortor in aenean ultricies sed mi. Dolor in tristique nunc tempor urna felis hendrerit commodo. Risus commodo est sed nunc fermentum. Integer.
+				
+section.home-6
+	.container
+		h2.font-bold.text-40px.text-center.text-e1.mt-20.mb-10 Manufacturing
+		.grid.gap-10.mb-10(class="grid-cols-12")
+			+ListManufacturingHome-1("./img/home/home-1/h-14.webp", "GASKETS", "SIU leads the way in high-efficiency in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-1("./img/home/home-1/h-15.webp", "O RINGS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-1("./img/home/home-1/h-16.webp", "SHIMS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-1("./img/home/home-1/h-17.webp", "FANS PARTS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-1("./img/home/home-1/h-18.webp", "RUBBER LINED SLEEVE...", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-1("./img/home/home-1/h-19.webp", "PUMP PARTS", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-1("./img/home/home-1/h-20.webp", "BUSHING", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
+			+ListManufacturingHome-1("./img/home/home-1/h-21.webp", "SLEEVES", "SIU leads the way in high-efficiency solutions using the latest technologies for maximum sealing performance.", "View more", "fa-thin fa-arrow-right")
 
-
+section.home-7 
+	.container 
+		h2.font-bold.text-40px.text-center.text-e1.pt-20.pb-10 New
+		.swiper.mySwiperNew
+			.swiper-wrapper
+				+ListNewHome-1("./img/home/home-1/h-22.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
+				+ListNewHome-1("./img/home/home-1/h-23.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
+				+ListNewHome-1("./img/home/home-1/h-24.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
+				+ListNewHome-1("./img/home/home-1/h-22.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
+			.text-center
+				button.btn-view-more.mb-5 VIEW MORE 
 
 script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
 script.
@@ -55,4 +118,86 @@ script.
 		el: ".swiper-pagination",
 		clickable: true,
 		},
+	});
+
+script.
+	var swiper = new Swiper(".mySwiper1", {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		navigation: {
+		nextEl: ".button-next",
+		prevEl: ".button-prev",
+	  },
+	   breakpoints: {
+	// when window width is >= 320px
+	320: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 480px
+	480: {
+		slidesPerView: 3,
+		spaceBetween: 20
+	},
+	// when window width is >= 640px
+	640: {
+		slidesPerView: 4,
+		spaceBetween: 20
+	},
+	768: {
+		slidesPerView: 4,
+		spaceBetween: 20,
+	},
+	1024: {
+		slidesPerView: 5,
+		spaceBetween: 20,
+	},
+	}
+	});
+
+
+script.
+	var swiper = new Swiper(".mySwiperProduct", {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		navigation: {
+		nextEl: ".button-next",
+		prevEl: ".button-prev",
+	  },
+	   breakpoints: {
+	// when window width is >= 320px
+	320: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 480px
+	480: {
+		slidesPerView: 3,
+		spaceBetween: 20
+	},
+	// when window width is >= 640px
+	640: {
+		slidesPerView: 4,
+		spaceBetween: 20
+	},
+	768: {
+		slidesPerView: 4,
+		spaceBetween: 20,
+	},
+	1024: {
+		slidesPerView: 4,
+		spaceBetween: 20,
+	},
+	}
+	});
+
+script.
+	var swiper = new Swiper(".mySwiperNew", {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		navigation: {
+		nextEl: ".button-next",
+		prevEl: ".button-prev",
+		},
+		
 	});
