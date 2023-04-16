@@ -75,10 +75,20 @@ section.home-3
 			.button-prev
 				i(class="fa-light fa-angle-left mt-2")
 
-section.home-4 
+section.service
 	.container
-		h2.font-bold.text-40px.text-center.text-primary Services
-					
+		h2.font-bold.text-40px.text-center.text-e1.mt-20.mb-10 Services
+		.relative
+			.swiper.mySwiperService 
+				.swiper-wrapper.mb-20
+					+ListServiceHome-6("./img/home/home-1/h-11.webp", "GEAR BOX REPAIR", "SIU have the necessary technically qualified manpower, readily available with extensive equipment resources to provide a quality, cost effective range of in-situ service that achieve desired results within acceptably short time frames.", "View More")
+					+ListServiceHome-6("./img/home/home-1/h-12.webp", "GEAR BOX REPAIR", "SIU have the necessary technically qualified manpower, readily available with extensive equipment resources to provide a quality, cost effective range of in-situ service that achieve desired results within acceptably short time frames.", "View More")
+					+ListServiceHome-6("./img/home/home-1/h-11.webp", "GEAR BOX REPAIR", "SIU have the necessary technically qualified manpower, readily available with extensive equipment resources to provide a quality, cost effective range of in-situ service that achieve desired results within acceptably short time frames.", "View More")
+			.button-next
+				i(class="fa-light fa-angle-right mt-2")
+			.button-prev
+				i(class="fa-light fa-angle-left mt-2")
+
 section.home-5 
 	img.w-full.object-cover(src="./img/home/home-1/h-13.webp")
 	.flex.flex-col.mt-auto.justify-between.relative 
@@ -102,14 +112,20 @@ section.home-6
 section.home-7 
 	.container 
 		h2.font-bold.text-40px.text-center.text-e1.pt-20.pb-10 New
-		.swiper.mySwiperNew
-			.swiper-wrapper
-				+ListNewHome-1("./img/home/home-1/h-22.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
-				+ListNewHome-1("./img/home/home-1/h-23.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
-				+ListNewHome-1("./img/home/home-1/h-24.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
-				+ListNewHome-1("./img/home/home-1/h-22.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
-			.text-center
-				button.btn-view-more.mb-5 VIEW MORE 
+		.relative
+			.swiper.mySwiperNew
+				.swiper-wrapper
+					+ListNewHome-1("./img/home/home-1/h-22.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
+					+ListNewHome-1("./img/home/home-1/h-23.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
+					+ListNewHome-1("./img/home/home-1/h-24.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
+					+ListNewHome-1("./img/home/home-1/h-22.webp", "New Chesterton 638  Electric Motor Grease - Empowering Pumps", "High Performing Grease that Exhibits Extreme Pressure, Water, and Corrosion Resistance to protect ...", "View more", "fa-thin fa-arrow-right")
+				.text-center
+					button.btn-view-more.mb-5 VIEW MORE 
+			.button-next
+				i(class="fa-light fa-angle-right mt-2")
+			.button-prev
+				i(class="fa-light fa-angle-left mt-2")
+
 
 script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
 script.
@@ -163,8 +179,8 @@ script.
 		navigation: {
 		nextEl: ".button-next",
 		prevEl: ".button-prev",
-	  },
-	   breakpoints: {
+	},
+		breakpoints: {
 	// when window width is >= 320px
 	320: {
 		slidesPerView: 2,
@@ -191,6 +207,7 @@ script.
 	}
 	});
 
+
 script.
 	var swiper = new Swiper(".mySwiperNew", {
 		slidesPerView: 3,
@@ -198,6 +215,66 @@ script.
 		navigation: {
 		nextEl: ".button-next",
 		prevEl: ".button-prev",
-		},
-		
+	},
+		breakpoints: {
+	// when window width is >= 320px
+	320: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 480px
+	480: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 640px
+	640: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	768: {
+		slidesPerView: 3,
+		spaceBetween: 20,
+	},
+	1024: {
+		slidesPerView: 3,
+		spaceBetween: 20,
+	},
+	}
+	});
+
+//- service
+script.
+	var swiper = new Swiper(".mySwiperService", {
+		slidesPerView: 2,
+		spaceBetween: 30,
+		navigation: {
+		nextEl: ".button-next",
+		prevEl: ".button-prev",
+	},
+		breakpoints: {
+	// when window width is >= 320px
+	320: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 480px
+	480: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 640px
+	640: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	768: {
+		slidesPerView: 2,
+		spaceBetween: 20,
+	},
+	1024: {
+		slidesPerView: 2,
+		spaceBetween: 20,
+	},
+	}
 	});

@@ -50,29 +50,82 @@ section.home-2
 					i(class="fa-thin fa-file-pdf mr-2")
 					| Download BroChure
 
-section.home-3 
+section.home-3-pro-dt 
 	.container 
 		.bg-f5 
-			.flex.flex-wrap.px-10.py-5
-				button.font-700.text-16px.text-t3.bg-t2.px-5.py-2 FEATURES & BENEFITS
-				button.font-700.text-16px.text-t3.bg-t2.px-5.py-2.ml-5 APPLICATIONS
-				buttonfont-700.text-16px.text-t2.bg-e1.px-5.py-2.ml-5 TECHNICAL DATA
-			.px-10
-				h2.font-bold.text-24px.text-e1 TECHNICAL DATA
-				.flex 
-					h3.font-bold.text-18px.text-t3.title-technical Temperature Limit
-					p.font-normal.text-18px.text-t3.desc-technical –240° C (–400° F) to 2760° C(5000° F) in non-oxidizing services 455° C (850° F) in oxidizing services
-				.border-text.mb-5
-				.flex 
-					h3.font-bold.text-18px.text-t3 Pressure Limit
-					p.font-normal.text-18px.text-t3.ml-40 140 bar g (2000 psig), Compressibility (ASTM-F36)40% Creep Relaxation (ASTM-F38) <5% Recovery (ASTM-F36)12 to 17% P x T = 58,000 (°C x bar g)​​ P x T = 1,600,000 (°F x psig)
-				.border-text.mb-5
-				.flex 
-					h3.font-bold.text-18px.text-t3 Color
-					p.font-normal.text-18px.text-t3 Grey
-				span.font-normal.text-14px.text-t9 
-					i(class="fa-thin fa-angles-down")
-					| View more
+			.p-12
+				.flex.flex-wrap
+					button.font-700.text-16px.text-t3.bg-t2.px-5.py-3 FEATURES & BENEFITS
+					button.font-700.text-16px.text-t3.bg-t2.px-7.py-3.ml-5 APPLICATIONS
+					button.font-700.text-16px.text-t2.bg-e1.px-5.py-3.ml-5 TECHNICAL DATA
+				h2.font-bold.text-24px.text-e1.mt-10 TECHNICAL DATA
+				.list
+					.title
+						h5 Temperature Limit
+					.content
+						p –240° C (–400° F) to 2760° C 
+							br
+							| (5000° F) in non-oxidizing services
+							br
+							| 455° C (850° F) in oxidizing services
+				.list
+					.title
+						h5 Pressure Limit
+					.content
+						p 140 bar g (2000 psig), Compressibility (ASTM-F36)40% Creep Relaxation (ASTM-F38)
+							br
+							| <5% Recovery (ASTM-F36)12 to 17%
+							br 
+							| P x T = 58,000 (°C x bar g)​​
+							br
+							| P x T = 1,600,000 (°F x psig)
+				.list 
+					.title
+						h5 Color
+					.content
+						p Grey
+				.flex.py-5
+					span.font-normal.text-14px.text-t9.uppercase.moreless-button View more
+						i(class="fa-thin fa-angles-down ml-2 ")
+		.bg-f5.mt-5 
+			.p-12.hidden.more-text
+				.flex.flex-wrap
+					button.font-700.text-16px.text-t3.bg-t2.px-5.py-3 FEATURES & BENEFITS
+					button.font-700.text-16px.text-t3.bg-t2.px-5.py-3.ml-5 APPLICATIONS
+					button.font-700.text-16px.text-t2.bg-e1.px-5.py-3.ml-5 TECHNICAL DATA
+				h2.font-bold.text-24px.text-e1.mt-10 TECHNICAL DATA
+				.list
+					.title
+						h5 Pressure Limit
+					.content
+						p 140 bar g (2000 psig), Compressibility (ASTM-F36)40% Creep Relaxation (ASTM-F38)
+							br
+							| <5% Recovery (ASTM-F36)12 to 17%
+							br 
+							| P x T = 58,000 (°C x bar g)​​
+							br
+							| P x T = 1,600,000 (°F x psig)
+				.flex.py-5
+					span.font-normal.text-14px.text-t9.uppercase.moreless-button View less
+						i(class="fa-thin fa-angles-up ml-2 ")
+
+
+section.home-4-pro-dt
+	.container
+		h2.font-bold.text-24px.text-e1.pt-10 RELATED PRODUCTS
+			.relative 
+			.swiper.mySwiperProduct.mt-5
+				.swiper-wrapper.mb-20
+					+ListProductsHome-1("new", "./img/home/home-1/h-7.webp", "Lubricants", "WIRE ROPE 455 ARAMID FIBER GASKET", "View More")
+					+ListProductsHome-1("new", "./img/home/home-1/h-8.webp", "O Ring", "D-RINGS", "View More")
+					+ListProductsHome-1("new", "./img/home/home-1/h-9.webp", "Chemicals", "CHESTERTON 273 ELECTRIC MOTOR CLEANER", "View More")
+					+ListProductsHome-1("new", "./img/home/home-1/h-10.webp", "Blasting Machine", "FEED UNIT 170 HP", "View More")
+					+ListProductsHome-1("new", "./img/home/home-1/h-7.webp", "Lubricants", "WIRE ROPE 455 ARAMID FIBER GASKET", "View More")
+			//- .button-next
+			//- 	i(class="fa-light fa-angle-right mt-2")
+			//- .button-prev
+			//- 	i(class="fa-light fa-angle-left mt-2")
+
 
 script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
 script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript")
@@ -112,4 +165,50 @@ script.
 
 	galleryThumbs.on('transitionStart', function () {
 		galleryMain.slideTo(galleryThumbs.activeIndex);
+	});
+
+script.
+	var swiper = new Swiper(".mySwiperProduct", {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		navigation: {
+		nextEl: ".button-next",
+		prevEl: ".button-prev",
+	},
+		breakpoints: {
+	// when window width is >= 320px
+	320: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 480px
+	480: {
+		slidesPerView: 2,
+		spaceBetween: 20
+	},
+	// when window width is >= 640px
+	640: {
+		slidesPerView: 3,
+		spaceBetween: 20
+	},
+	768: {
+		slidesPerView: 4,
+		spaceBetween: 20,
+	},
+	1024: {
+		slidesPerView: 4,
+		spaceBetween: 20,
+	},
+	}
+	});
+
+script.
+	$('.moreless-button').click(function() {
+	$('.more-text').slideToggle();
+	if ($('.moreless-button').text() == "View more") {
+		$(this).text("View less")
+	} 
+	//- else {
+	//- 	$(this).text("View more")
+	//- }
 	});

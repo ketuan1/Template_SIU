@@ -1,54 +1,79 @@
-footer.footer.bg-primary
-	.container.pt-20
-		.grid.gap-6(class="grid-cols-12")
-			div(class="xs:col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-3")
-				.flex.justify-center
-					img.img-footer.my-auto(src='./img/footer/lgfoter.webp')
-					.flex.flex-col.mt-auto.ml-2
-						h2.font-normal.text-t2.text-base TỔNG CÔNG TY VĂN HÓA SÀI GÒN
-						span.font-thin.text-t2.text-sm SAIGON CULTURAL PRODUCTS CORP.
-				.flex.mt-5 
-					span(class="inline-flex items-center justify-center h-[1.875rem] w-[1.875rem] rounded-full border text-t2")
-						i(class="fa-brands fa-facebook-f")
-					span(class="inline-flex items-center justify-center h-[1.875rem] w-[1.875rem] rounded-full border text-t2 ml-5")
-						i(class="fa-brands fa-instagram")
-					span(class="inline-flex items-center justify-center h-[1.875rem] w-[1.875rem] rounded-full border text-t2 ml-5")
-						i(class="fa-brands fa-linkedin")
-					span(class="inline-flex items-center justify-center h-[1.875rem] w-[1.875rem] rounded-full border text-t2 ml-5")
-						i(class="fa-brands fa-instalod")
+footer.bg-t1
+	.container
+		.grid.gap-2.pt-10.pb-10(class="grid-cols-12")
+			div(class="xs:col-span-12 sm:col-span-12 md:col-span-5 lg:col-span-5")
+				h2.font-bold.text-24px.text-t2 SIU INDUSTRY
+				ul.mt-3
+					li.mt-3
+						i(class="fa-thin fa-location-dot font-light text-16px text-center text-t2")
+						a(href="#" class="font-normal text-16px text-t2 ml-2") 611 Ta Quang Buu St. Dist.8, Ho Chi Minh City , Viet Nam
+					li.mt-3
+						i(class="fa-thin fa-globe font-light text-16px text-center text-t2")
+						a(href="#" class="font-normal text-16px text-t2 ml-2") www.siuindustry.com
+					li.mt-3
+						i(class="fa-sharp fa-light fa-envelope font-light text-16px text-center text-t2")
+						a(href="#" class="font-normal text-16px text-t2 ml-2") sales@siuindustry.com
+					li.mt-3
+						i(class="fa-light fa-phone-arrow-up-right font-light text-16px text-center text-t2")
+						a(href="#" class="font-normal text-16px text-t2 ml-2") 0918184800
+				ul.flex.font-normal.text-24px.text-t2.align-center.mt-5
+					i(class="fa-brands fa-facebook-f")
+					i(class="fa-brands fa-instagram ml-5")
+					i(class="fa-brands fa-youtube ml-5")
 
-				div.mt-auto
-					img.block.mt-5(src='./img/footer/pdf.webp')
-					span.font-normal.text-14px.underline.text-t2.ml-14.block.underline-footer Tải Brochure
-			div(class="xs:col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-4")
-				h2.font-semibold.text-3xl.text-t2 Liên hệ
-				ul.flex.flex-col.h-full.mt-5
-					li.font-normal.text-14px.text-t6 Địa chỉ
-						span.font-normal.text-14px.text-t2.ml-5 88 Trần Đình Xu, Phường Cô Giang, Quận 1, Thành phố Hồ Chí Minh
-					li.font-normal.text-14px.text-t6.mt-3 Hotline
-						span.font-normal.text-14px.text-t2.ml-5  (028) 383 65 778 - (028)392 06 606 – (028) 383 85 269
-					li.font-normal.text-14px.text-t6.mt-3 Website
-						span.font-normal.text-14px.text-t2.ml-5  http://www.scpc.com.vn
 
-			div(class="xs:col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-2")
-				h2.font-semibold.text-3xl.text-t2 Liên kết nhanh
-				ul.font-normal.text-14px.text-t2.mt-5
-					li Giới thiệu
-					li.mt-3 Lĩnh vực hoạt động
-					li.mt-3 Tin tức
-					li.mt-3 Công bố thông tin
-					li.mt-3 Liên hệ
+			div(class="xs:col-span-4 sm:col-span-4 md:col-span-2 lg:col-span-2")
+				h2.font-bold.text-24px.text-t2 Products
+				ul.list-disc.text-t2.mt-3.px-4
+					li 
+						a(href="" class="font-normal text-16px text-t2") Gasket
+					li 
+						a(href="" class="font-normal text-16px text-t2") Packing
+					li 
+						a(href="" class="font-normal text-16px text-t2") O RING
+					li 
+						a(href="" class="font-normal text-16px text-t2") Hydraulic Seals
+					li 
+						a(href="" class="font-normal text-16px text-t2") Chemicals
+					li 
+						a(href="" class="font-normal text-16px text-t2") Lubricants
+					li 
+						a(href="") Fittings
 
-			div(class="xs:col-span-12 sm:col-span-6 md:col-span-3 lg:col-span-3")
-				h2.font-semibold.text-3xl.text-t2 Đăng ký thông báo
-				p.font-normal.text-14px.text-t2.mt-5 Nhập thông tin của bạn để đăng ký nhận thông báo về tin tức mới nhất của SCPC
-				form.mt-3.relative
-					input(type="search" class="block w-full rounded-lg border-1 text-t3 border-white bg-none bg-primary outline-none" placeholder="Email..." required)
-					i.icon-mail-footer(class="fa-light fa-paper-plane-top")
+			div(class="xs:col-span-4 sm:col-span-4 md:col-span-2 lg:col-span-2")
+				ul.list-disc.text-t2.mt-10
+					li 
+						a(href="" class="font-normal text-16px text-t2") Raw Materials​​​​
+					li 
+						a(href="" class="font-normal text-16px text-t2") Shims​​​​
+					li 
+						a(href="" class="font-normal text-16px text-t2") Injection Nozzles
+					li 
+						a(href="" class="font-normal text-16px text-t2") Blasting Machine
+					li 
+						a(href="" class="font-normal text-16px text-t2") MRO Products​​​​
+					li 
+						a(href="" class="font-normal text-16px text-t2") Tools​​​​
+					li 
+						a(href="" class="font-normal text-16px text-t2") Valves
+			div(class="xs:col-span-4 sm:col-span-4 md:col-span-3 lg:col-span-3")
+				h2.font-bold.text-24px.text-t2 QUICK LINKS
+				ul.list-disc.text-t2.mt-3.px-4
+					li 
+						a(href="" class="font-normal text-16px text-t2") About us
+					li 
+						a(href="" class="font-normal text-16px text-t2") Services
+					li 
+						a(href="" class="font-normal text-16px text-t2") Manufacturing
+					li 
+						a(href="" class="font-normal text-16px text-t2") News
+					li 
+						a(href="" class="font-normal text-16px text-t2") Contact us
 
-		.grid.mt-10(class="grid-cols-12")
-			div(class="xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-8")
-				p.font-normal.text-base.text-t2.opacity-20 Copyright © 2022 SCPC. Thiết kế web bởi Cánh Cam
-				p.font-normal.text-base.text-f5  Mọi thông tin được sử dụng trên website đều phải thông qua và được sự chấp thuận từ phía SCPC
-			div(class="xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4")
-				p.font-normal.text-base.text-t2.opacity-20 Điều kiện và điều khoản  |  Chính sách bảo mật  | Sitemap
+.bg-e1 
+	.container 
+		.grid(class="grid-cols-12")
+			div(class="xs:col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-8")
+				p.font-normal.text-14px.text-t2.mt-5.mb-5 © 2022 SIU Industry. All Rights Reserved.
+			div(class="xs:col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-4")
+				p.font-normal.text-14px.text-t2.mt-5.mb-5 Terms and Conditions  .  Privacy Policy  .  Sitemap

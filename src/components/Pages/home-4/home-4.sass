@@ -34,10 +34,42 @@
 		border-radius: 10px
 		@apply font-black text-14px text-center text-t3
 
-.home-3
-	.title-technical
-		width: 20%
-	.desc-technical
-		width: 22%
-		max-width: 22%
-		margin-left: 50px
+.home-3-pro-dt
+	.list
+		display: flex
+		border-bottom: 1px solid #D1D1D1
+		@apply py-5
+		.title
+			@apply font-bold text-18px text-t3 flex
+		.content
+			@apply font-normal text-18px text-t3 flex justify-between ml-20
+
+.home-4-pro-dt
+	background-image: url('../img/home/home-4/h-12.webp')
+	width: 100%
+	height: 100%
+	margin-top: 60px
+	.swiper
+		width: 100%
+		height: 100%
+	.swiper-slider
+		height: auto !important
+	.custom-sl
+		height: auto !important
+	.list-ct
+		height: 100% !important
+	.title-new
+		position: absolute
+		left: 12%
+		transform: translate(-50%, -50%)
+		text-align: center
+		border-radius: 5px
+		padding: 8px 15px
+		@apply text-xs font-bold text-t2 bg-primary
+	.btn-view
+		border: 1px solid #E41623
+		border-radius: 10px
+		padding: 15px 50px
+		@apply font-bold text-14px text-t2 bg-e1 uppercase
+		&:hover
+			@apply text-e1 bg-t2

@@ -34,15 +34,16 @@ mixin ListProductsHome-1(news,image, title, header, btn)
 //- list Manufacturing home-1
 mixin ListManufacturingHome-1(image, header, desc, btn, icon)
 	div(class="xs:col-span-6 sm:col-span-6 md:col-span-4 lg:col-span-3")
-		div
-			img.w-full.h-full(src= image)
-		.bg-f5.mt-auto.flex.flex-col
-			.px-5.py-3.h-full
-				h2.font-bold.text-18px.text-t3.mb-3= header
-				p.font-normal.text-14px.text-t6.mb-3= desc
-				.flex.h-full.justify-between.mt-auto
-					button.font-bold.text-14px.text-t3.uppercase= btn
-						i.font-light.text-xl.text-primary.ml-3(class= icon)
+		.flex.flex-col
+			div
+				img.w-full.h-full(src= image)
+			.bg-f5.mt-auto.flex.flex-col
+				.px-5.py-3.h-full
+					h2.font-bold.text-18px.text-t3.mb-3= header
+					p.font-normal.text-14px.text-t6.mb-3= desc
+					.flex.h-full.justify-between.mt-auto
+						button.font-bold.text-14px.text-t3.uppercase= btn
+							i.font-light.text-xl.text-primary.ml-3(class= icon)
 
 //- list new home-1
 
